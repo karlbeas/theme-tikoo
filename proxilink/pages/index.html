@@ -1,158 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Tikoo – Le Réseau Professionnel Local d'Afrique</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tikoo — Le réseau professionnel de proximité</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
   <style>
-    .t-nav{padding:1.25rem 0;}
-    .footer{background:#071A12;color:rgba(255,255,255,.7);padding:4rem 0 2rem;}
-    .footer a{color:rgba(255,255,255,.6);}
-    .footer a:hover{color:#fff;}
-    .step-num{width:48px;height:48px;background:var(--tko-primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:var(--tko-primary);margin:0 auto 1rem;}
-    .testi-card{background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1.5rem;height:100%;}
-    .mockup-card{background:rgba(255,255,255,.1);border-radius:12px;padding:.875rem;display:flex;align-items:center;gap:.75rem;}
+    .landing-nav { background: transparent; position: absolute; width: 100%; z-index: 10; padding: 1.25rem 0; }
+    .features-section { background: var(--tko-bg); padding: 5rem 0; }
+    .how-section { background: var(--tko-surface); padding: 5rem 0; }
+    .stats-section { background: linear-gradient(135deg, var(--tko-primary) 0%, #155249 100%); padding: 4rem 0; color: #fff; }
+    .testimonials-section { background: var(--tko-bg); padding: 5rem 0; }
+    .cta-section { background: linear-gradient(140deg, #0F2B22 0%, var(--tko-primary) 100%); padding: 5rem 0; color: #fff; }
+    .footer { background: #071A12; color: rgba(255,255,255,.7); padding: 3rem 0 1.5rem; }
+    .step-number { width: 48px; height: 48px; background: var(--tko-primary-light); color: var(--tko-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; margin: 0 auto 1rem; }
+    .testimonial-card { background: var(--tko-surface); border: 1px solid var(--tko-border); border-radius: var(--tko-radius); padding: 1.5rem; }
+    .testimonial-stars { color: #F59E0B; }
+    .app-mockup { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 20px; padding: 1rem; max-width: 340px; }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="tko-hero">
-  <div class="container">
-    <nav class="t-nav d-flex align-items-center justify-content-between">
+<!-- NAVBAR -->
+<div class="tko-hero">
+  <nav class="landing-nav">
+    <div class="container d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center gap-2">
         <div class="tko-logo-icon">T</div>
-        <span style="font-size:21px;font-weight:800;color:#fff;">Tikoo</span>
+        <span class="tko-logo-text">Tikoo</span>
       </div>
-      <div class="d-none d-md-flex align-items-center gap-4">
+      <div class="d-none d-lg-flex align-items-center gap-4">
         <a href="#features" style="color:rgba(255,255,255,.8);font-size:14px;font-weight:500;">Fonctionnalités</a>
         <a href="#how" style="color:rgba(255,255,255,.8);font-size:14px;font-weight:500;">Comment ça marche</a>
-        <a href="sign-in.html" style="color:rgba(255,255,255,.8);font-size:14px;font-weight:500;">Se connecter</a>
-        <a href="sign-up.html" class="btn-tko-primary" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);">S'inscrire</a>
+        <a href="#testimonials" style="color:rgba(255,255,255,.8);font-size:14px;font-weight:500;">Témoignages</a>
       </div>
-    </nav>
+      <div class="d-flex align-items-center gap-2">
+        <button class="tko-icon-btn d-lg-none" data-toggle-theme data-theme-icon style="border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;"><i class="bi bi-moon-fill"></i></button>
+        <a href="sign-in.html" class="btn-tko-white" style="padding:.45rem 1.1rem;">Connexion</a>
+        <a href="sign-up.html" class="btn-tko-primary" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);" class="d-none d-md-inline-flex">S'inscrire</a>
+      </div>
+    </div>
+  </nav>
 
-    <div class="row align-items-center py-5 g-5">
+  <!-- HERO -->
+  <div class="container" style="padding: 9rem 0 6rem; flex:1; display:flex; align-items:center;">
+    <div class="row align-items-center g-5">
       <div class="col-lg-6">
-        <div class="tko-hero-badge"><i class="bi bi-geo-alt-fill"></i> Réseau n°1 des pros au Cameroun</div>
-        <h1>Connectez-vous aux <span>meilleurs professionnels</span> près de vous</h1>
-        <p class="lead mb-4">Tikoo est le réseau social professionnel local conçu pour l'Afrique. Trouvez, collaborez et développez votre activité avec les meilleurs talents de votre ville.</p>
-        <div class="d-flex gap-3 flex-wrap mb-4">
-          <a href="sign-up.html" class="btn-tko-primary" style="font-size:16px;padding:.75rem 1.75rem;"><i class="bi bi-rocket-takeoff-fill"></i> Commencer gratuitement</a>
-          <a href="search.html" class="btn-tko-outline" style="border-color:rgba(255,255,255,.4);color:#fff;font-size:16px;padding:.75rem 1.75rem;background:rgba(255,255,255,.08);"><i class="bi bi-search"></i> Trouver un pro</a>
+        <div class="tko-hero-badge"><i class="bi bi-geo-alt-fill"></i> Disponible au Cameroun &mdash; Douala &amp; Yaoundé</div>
+        <h1>Connectez-vous aux meilleurs <span>professionnels locaux</span></h1>
+        <p class="lead mb-4">Tikoo est le réseau social professionnel de proximité. Trouvez des prestataires vérifiés, publiez vos services, gérez votre présence business et explorez les opportunités près de chez vous.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="sign-up.html" class="btn-tko-white" style="padding:.75rem 2rem;font-size:15px;"><i class="bi bi-person-plus-fill"></i> Créer mon compte</a>
+          <a href="search.html" class="btn-tko-outline" style="border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.08);padding:.75rem 2rem;font-size:15px;"><i class="bi bi-search"></i> Explorer</a>
         </div>
-        <div class="d-flex gap-4" style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.12);">
-          <div><div style="font-size:2rem;font-weight:800;color:#7EDFC0;letter-spacing:-.04em;">50K+</div><div style="font-size:12px;opacity:.7;">Professionnels</div></div>
-          <div><div style="font-size:2rem;font-weight:800;color:#7EDFC0;letter-spacing:-.04em;">120+</div><div style="font-size:12px;opacity:.7;">Villes</div></div>
-          <div><div style="font-size:2rem;font-weight:800;color:#7EDFC0;letter-spacing:-.04em;">4.8★</div><div style="font-size:12px;opacity:.7;">Note moyenne</div></div>
-          <div><div style="font-size:2rem;font-weight:800;color:#7EDFC0;letter-spacing:-.04em;">2M+</div><div style="font-size:12px;opacity:.7;">Connexions</div></div>
+        <div class="d-flex gap-4 mt-4" style="opacity:.8;font-size:13px;">
+          <div class="d-flex align-items-center gap-1"><i class="bi bi-shield-check-fill text-success"></i> Profils vérifiés</div>
+          <div class="d-flex align-items-center gap-1"><i class="bi bi-geo-alt-fill" style="color:#7EDFC0;"></i> Géolocalisation</div>
+          <div class="d-flex align-items-center gap-1"><i class="bi bi-star-fill" style="color:#F59E0B;"></i> Avis certifiés</div>
         </div>
       </div>
       <div class="col-lg-6 d-none d-lg-block">
-        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:1.5rem;backdrop-filter:blur(10px);">
-          <div class="d-flex align-items-center gap-2 mb-3">
-            <div class="tko-logo-icon" style="width:28px;height:28px;font-size:13px;">T</div>
-            <span style="font-weight:700;font-size:15px;color:#fff;">Tikoo</span>
-            <span style="background:rgba(34,197,94,.2);color:#7EDFC0;border-radius:20px;padding:.15rem .6rem;font-size:10px;font-weight:600;margin-left:auto;">&#9679; En ligne</span>
-          </div>
-          <div style="background:rgba(255,255,255,.12);border-radius:40px;padding:.6rem 1.25rem;display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
-            <i class="bi bi-search" style="color:rgba(255,255,255,.6);"></i>
-            <span style="color:rgba(255,255,255,.7);font-size:13px;">Trouver un plombier à Douala Akwa...</span>
-          </div>
-          <div class="d-flex flex-column gap-2">
-            <div class="mockup-card">
-              <img src="https://i.pravatar.cc/42?img=12" style="width:42px;height:42px;border-radius:50%;flex-shrink:0;" alt="">
-              <div style="flex:1;">
-                <div style="font-weight:600;font-size:13px;color:#fff;">Serge Ateba</div>
-                <div style="font-size:11px;color:rgba(255,255,255,.6);">&#128247; Photographe &middot; Bonapriso</div>
-                <div style="font-size:11px;color:#F59E0B;">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:rgba(255,255,255,.5);">(148)</span></div>
-              </div>
-              <span style="background:rgba(34,197,94,.2);color:#7EDFC0;border-radius:20px;padding:.2rem .6rem;font-size:10px;font-weight:600;">Disponible</span>
+        <div class="app-mockup ms-auto">
+          <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:.75rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem;">
+            <img src="https://i.pravatar.cc/40?img=12" style="width:40px;height:40px;border-radius:50%;" alt="">
+            <div>
+              <div style="color:#fff;font-weight:600;font-size:13px;">Serge A. &bull; <span style="color:#7EDFC0;font-size:11px;">Vérifié &#10003;</span></div>
+              <div style="color:rgba(255,255,255,.7);font-size:12px;">Photographe Professionnel &bull; 0.8 km</div>
+              <div style="color:#F59E0B;font-size:11px;">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 (127 avis)</div>
             </div>
-            <div class="mockup-card">
-              <img src="https://i.pravatar.cc/42?img=25" style="width:42px;height:42px;border-radius:50%;flex-shrink:0;" alt="">
-              <div style="flex:1;">
-                <div style="font-weight:600;font-size:13px;color:#fff;">Marie Bella</div>
-                <div style="font-size:11px;color:rgba(255,255,255,.6);">&#128202; Comptable OHADA &middot; Akwa</div>
-                <div style="font-size:11px;color:#F59E0B;">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:rgba(255,255,255,.5);">(92)</span></div>
-              </div>
-              <span style="background:rgba(34,197,94,.2);color:#7EDFC0;border-radius:20px;padding:.2rem .6rem;font-size:10px;font-weight:600;">Disponible</span>
+          </div>
+          <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:.75rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem;">
+            <img src="https://i.pravatar.cc/40?img=25" style="width:40px;height:40px;border-radius:50%;" alt="">
+            <div>
+              <div style="color:#fff;font-weight:600;font-size:13px;">Marie B. &bull; <span style="color:#7EDFC0;font-size:11px;">Vérifié &#10003;</span></div>
+              <div style="color:rgba(255,255,255,.7);font-size:12px;">Comptable OHADA &bull; 1.2 km</div>
+              <div style="color:#F59E0B;font-size:11px;">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 (89 avis)</div>
             </div>
-            <div class="mockup-card">
-              <img src="https://i.pravatar.cc/42?img=45" style="width:42px;height:42px;border-radius:50%;flex-shrink:0;" alt="">
-              <div style="flex:1;">
-                <div style="font-weight:600;font-size:13px;color:#fff;">Patrick Nkomo</div>
-                <div style="font-size:11px;color:rgba(255,255,255,.6);">&#128187; Dev Full-Stack &middot; Yaoundé</div>
-                <div style="font-size:11px;color:#F59E0B;">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:rgba(255,255,255,.5);">(67)</span></div>
-              </div>
-              <span style="background:rgba(255,149,0,.2);color:#FCD34D;border-radius:20px;padding:.2rem .6rem;font-size:10px;font-weight:600;">Occupé</span>
+          </div>
+          <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:.75rem;display:flex;align-items:center;gap:.75rem;">
+            <div style="width:40px;height:40px;border-radius:10px;background:#1F7A63;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;font-weight:800;">TC</div>
+            <div>
+              <div style="color:#fff;font-weight:600;font-size:13px;">TechCam Solutions &bull; <span style="background:#22C55E;color:#fff;border-radius:10px;padding:0 .4rem;font-size:10px;">Ouvert</span></div>
+              <div style="color:rgba(255,255,255,.7);font-size:12px;">Agence IT &bull; Akwa, Douala</div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3"><div class="tko-stat-number" style="color:#7EDFC0;">50K+</div><div style="font-size:14px;opacity:.8;">Professionnels vérifiés</div></div>
+      <div class="col-6 col-md-3"><div class="tko-stat-number" style="color:#7EDFC0;">12K+</div><div style="font-size:14px;opacity:.8;">Entreprises inscrites</div></div>
+      <div class="col-6 col-md-3"><div class="tko-stat-number" style="color:#7EDFC0;">98K+</div><div style="font-size:14px;opacity:.8;">Mises en relation</div></div>
+      <div class="col-6 col-md-3"><div class="tko-stat-number" style="color:#7EDFC0;">4.8&#9733;</div><div style="font-size:14px;opacity:.8;">Note moyenne</div></div>
     </div>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="py-5" style="background:var(--tko-bg);">
-  <div class="container py-4">
+<section class="features-section" id="features">
+  <div class="container">
     <div class="text-center mb-5">
-      <span class="badge-tko badge-tko-primary mb-3">Fonctionnalités</span>
-      <h2 style="font-size:clamp(1.6rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;color:var(--tko-text);">Tout ce dont vous avez besoin,<br>en un seul endroit</h2>
+      <div class="badge-tko badge-tko-primary mb-2"><i class="bi bi-stars"></i> Fonctionnalités</div>
+      <h2 style="font-size:2rem;font-weight:800;letter-spacing:-.02em;color:var(--tko-text);">Tout ce dont vous avez besoin</h2>
+      <p style="color:var(--tko-text-muted);max-width:500px;margin:.75rem auto 0;">Une plateforme complète pour votre vie professionnelle locale.</p>
     </div>
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4"><div class="tko-feature-card h-100"><div class="tko-feature-icon"><i class="bi bi-geo-alt-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Découverte locale</h5><p style="color:var(--tko-text-muted);font-size:14px;margin:0;">Trouvez les meilleurs professionnels autour de vous grâce à la carte interactive et la recherche de proximité.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="tko-feature-card h-100"><div class="tko-feature-icon"><i class="bi bi-robot"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Recherche IA</h5><p style="color:var(--tko-text-muted);font-size:14px;margin:0;">Exprimez votre besoin en langage naturel. Notre IA vous trouve les meilleurs résultats instantanément.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="tko-feature-card h-100"><div class="tko-feature-icon"><i class="bi bi-person-badge-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Profil professionnel</h5><p style="color:var(--tko-text-muted);font-size:14px;margin:0;">Créez un profil complet avec services, portfolio, certifications et avis clients. LinkedIn + Google Business.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="tko-feature-card h-100"><div class="tko-feature-icon"><i class="bi bi-journal-richtext"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Fil d'actualité</h5><p style="color:var(--tko-text-muted);font-size:14px;margin:0;">Publiez, partagez et découvrez des opportunités, services et actualités de votre réseau professionnel.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="tko-feature-card h-100"><div class="tko-feature-icon"><i class="bi bi-briefcase-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Emplois &amp; Opportunités</h5><p style="color:var(--tko-text-muted);font-size:14px;margin:0;">Explorez des centaines d'offres d'emploi et de missions freelance dans votre ville et au-delà.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="tko-feature-card h-100"><div class="tko-feature-icon"><i class="bi bi-building-check"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Pages Business</h5><p style="color:var(--tko-text-muted);font-size:14px;margin:0;">La vitrine digitale de votre entreprise avec horaires, services, photos et avis. Comme Google Business.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="tko-feature-card"><div class="tko-feature-icon"><i class="bi bi-person-badge-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Profil Professionnel</h5><p style="color:var(--tko-text-muted);font-size:14px;margin-top:.5rem;">Créez un profil complet avec vos services, certifications, portfolio et avis clients.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="tko-feature-card"><div class="tko-feature-icon"><i class="bi bi-geo-alt-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Découverte Locale</h5><p style="color:var(--tko-text-muted);font-size:14px;margin-top:.5rem;">Carte interactive pour trouver les professionnels et services autour de vous en temps réel.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="tko-feature-card"><div class="tko-feature-icon"><i class="bi bi-robot"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Recherche IA</h5><p style="color:var(--tko-text-muted);font-size:14px;margin-top:.5rem;">Posez vos questions en langage naturel. &laquo;&nbsp;Trouver un plombier disponible maintenant à Akwa&nbsp;&raquo;.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="tko-feature-card"><div class="tko-feature-icon"><i class="bi bi-briefcase-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Emplois &amp; Opportunités</h5><p style="color:var(--tko-text-muted);font-size:14px;margin-top:.5rem;">Offres d'emploi locales, candidature rapide, profil de recruteur et matching intelligent.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="tko-feature-card"><div class="tko-feature-icon"><i class="bi bi-building"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Page Business</h5><p style="color:var(--tko-text-muted);font-size:14px;margin-top:.5rem;">Votre entreprise visible en ligne avec horaires, photos, services, avis et localisation.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="tko-feature-card"><div class="tko-feature-icon"><i class="bi bi-chat-dots-fill"></i></div><h5 style="font-weight:700;color:var(--tko-text);">Messagerie</h5><p style="color:var(--tko-text-muted);font-size:14px;margin-top:.5rem;">Communiquez directement avec les professionnels. Partage de fichiers, localisation et devis.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- HOW -->
-<section id="how" class="py-5" style="background:var(--tko-surface);">
-  <div class="container py-4">
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="container">
     <div class="text-center mb-5">
-      <span class="badge-tko badge-tko-primary mb-3">Comment ça marche</span>
-      <h2 style="font-size:clamp(1.6rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;color:var(--tko-text);">Démarrez en 3 étapes simples</h2>
+      <div class="badge-tko badge-tko-primary mb-2">Comment ça marche</div>
+      <h2 style="font-size:2rem;font-weight:800;letter-spacing:-.02em;color:var(--tko-text);">Simple, rapide et efficace</h2>
     </div>
-    <div class="row g-4">
-      <div class="col-md-4 text-center"><div class="step-num">1</div><h5 style="font-weight:700;color:var(--tko-text);">Créez votre profil</h5><p style="color:var(--tko-text-muted);font-size:14px;">Inscrivez-vous en moins de 2 minutes. Choisissez votre type : particulier, professionnel, entreprise ou recruteur.</p></div>
-      <div class="col-md-4 text-center"><div class="step-num">2</div><h5 style="font-weight:700;color:var(--tko-text);">Découvrez les pros</h5><p style="color:var(--tko-text-muted);font-size:14px;">Utilisez la recherche IA ou la carte pour trouver les meilleurs professionnels vérifiés près de chez vous.</p></div>
-      <div class="col-md-4 text-center"><div class="step-num">3</div><h5 style="font-weight:700;color:var(--tko-text);">Collaborez &amp; Grandissez</h5><p style="color:var(--tko-text-muted);font-size:14px;">Connectez-vous, échangez via la messagerie sécurisée, demandez des devis et laissez des avis vérifiés.</p></div>
+    <div class="row g-4 text-center">
+      <div class="col-md-4"><div class="step-number">1</div><h5 style="font-weight:700;">Créez votre profil</h5><p style="color:var(--tko-text-muted);font-size:14px;">Inscrivez-vous en 2 minutes. Choisissez votre type de profil et complétez vos informations.</p></div>
+      <div class="col-md-4"><div class="step-number">2</div><h5 style="font-weight:700;">Recherchez ou publiez</h5><p style="color:var(--tko-text-muted);font-size:14px;">Trouvez des professionnels près de vous ou publiez vos services pour être découvert.</p></div>
+      <div class="col-md-4"><div class="step-number">3</div><h5 style="font-weight:700;">Connectez &amp; agissez</h5><p style="color:var(--tko-text-muted);font-size:14px;">Contactez, évaluez, partagez. Développez votre réseau professionnel local.</p></div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="py-5" style="background:var(--tko-bg);">
-  <div class="container py-4">
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
     <div class="text-center mb-5">
-      <span class="badge-tko badge-tko-primary mb-3">Témoignages</span>
-      <h2 style="font-size:clamp(1.6rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;color:var(--tko-text);">Ils font confiance à Tikoo</h2>
+      <div class="badge-tko badge-tko-primary mb-2">Témoignages</div>
+      <h2 style="font-size:2rem;font-weight:800;letter-spacing:-.02em;color:var(--tko-text);">Ce qu'ils en disent</h2>
     </div>
     <div class="row g-4">
-      <div class="col-md-4"><div class="testi-card"><div style="color:#F59E0B;margin-bottom:.5rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:1rem;">&laquo; Grâce à Tikoo, j'ai trouvé 3 nouveaux clients en une semaine. La recherche par proximité est révolutionnaire pour les artisans comme moi. &raquo;</p><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/36?img=52" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Alain Mbarga</div><div style="font-size:11px;color:var(--tko-text-muted);">Electricien certifié &middot; Douala</div></div></div></div></div>
-      <div class="col-md-4"><div class="testi-card"><div style="color:#F59E0B;margin-bottom:.5rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:1rem;">&laquo; J'ai décroché mon emploi actuel via Tikoo. Le module emplois est bien pensé et les offres sont vraiment locales et pertinentes. &raquo;</p><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/36?img=33" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Sylvie Essama</div><div style="font-size:11px;color:var(--tko-text-muted);">Marketing Manager &middot; Yaoundé</div></div></div></div></div>
-      <div class="col-md-4"><div class="testi-card"><div style="color:#F59E0B;margin-bottom:.5rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:1rem;">&laquo; Notre agence reçoit maintenant des demandes chaque jour grâce à notre page Tikoo. ROI exceptionnel pour une PME camerounaise. &raquo;</p><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/36?img=43" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Gérard Mbenga</div><div style="font-size:11px;color:var(--tko-text-muted);">DG Agence Lumière &middot; Douala</div></div></div></div></div>
+      <div class="col-md-4"><div class="testimonial-card"><div class="testimonial-stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:1rem;">&laquo;&nbsp;Tikoo m'a permis de tripler mon nombre de clients en 3 mois. Les demandes arrivent directement sur mon profil.&nbsp;&raquo;</p><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/36?img=12" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;">Serge Ateba</div><div style="font-size:12px;color:var(--tko-text-muted);">Photographe, Douala</div></div></div></div></div>
+      <div class="col-md-4"><div class="testimonial-card"><div class="testimonial-stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:1rem;">&laquo;&nbsp;J'ai trouvé mon emploi actuel via Tikoo Jobs. La recherche par proximité est vraiment pratique.&nbsp;&raquo;</p><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/36?img=33" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;">Sylvie Essama</div><div style="font-size:12px;color:var(--tko-text-muted);">Juriste, Yaoundé</div></div></div></div></div>
+      <div class="col-md-4"><div class="testimonial-card"><div class="testimonial-stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:1rem;">&laquo;&nbsp;Notre agence reçoit 15 à 20 demandes qualifiées par semaine depuis notre Page Business Tikoo.&nbsp;&raquo;</p><div class="d-flex align-items-center gap-2"><img src="https://i.pravatar.cc/36?img=45" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;">Patrick Nkomo</div><div style="font-size:12px;color:var(--tko-text-muted);">DG, TechCam Solutions</div></div></div></div></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section style="background:linear-gradient(135deg,#0F2B22 0%,#1F7A63 100%);padding:5rem 0;color:#fff;text-align:center;">
-  <div class="container">
-    <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-.03em;margin-bottom:1rem;">Prêt à rejoindre Tikoo ?</h2>
-    <p style="opacity:.8;font-size:17px;margin-bottom:2rem;">Plus de 50 000 professionnels vous attendent déjà sur la plateforme.</p>
+<section class="cta-section">
+  <div class="container text-center">
+    <div class="tko-hero-badge" style="margin-bottom:1.5rem;"><i class="bi bi-lightning-fill"></i> Gratuit &mdash; Rejoignez 50 000+ professionnels</div>
+    <h2 style="font-size:2.25rem;font-weight:800;letter-spacing:-.03em;">Prêt à développer votre activité ?</h2>
+    <p style="opacity:.8;max-width:480px;margin:.75rem auto 2rem;font-size:16px;">Créez votre profil Tikoo gratuitement et connectez-vous aux meilleurs professionnels de votre ville.</p>
     <div class="d-flex gap-3 justify-content-center flex-wrap">
-      <a href="sign-up.html" class="btn-tko-primary" style="font-size:16px;padding:.875rem 2rem;background:#fff;color:var(--tko-primary);border-color:#fff;"><i class="bi bi-rocket-takeoff-fill"></i> Créer mon compte gratuit</a>
-      <a href="search.html" class="btn-tko-outline" style="font-size:16px;padding:.875rem 2rem;border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.1);"><i class="bi bi-search"></i> Explorer les pros</a>
+      <a href="sign-up.html" class="btn-tko-white" style="padding:.75rem 2rem;font-size:15px;"><i class="bi bi-person-plus-fill"></i> Commencer gratuitement</a>
+      <a href="feed.html" class="btn-tko-outline" style="border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.08);padding:.75rem 2rem;font-size:15px;">Voir le fil d'actualité</a>
     </div>
   </div>
 </section>
@@ -161,28 +170,25 @@
 <footer class="footer">
   <div class="container">
     <div class="row g-4 mb-4">
-      <div class="col-lg-4">
-        <div class="d-flex align-items-center gap-2 mb-3"><div class="tko-logo-icon">T</div><span style="font-size:21px;font-weight:800;color:#fff;">Tikoo</span></div>
-        <p style="font-size:14px;line-height:1.7;">Le réseau professionnel local d'Afrique. Connectez-vous, découvrez et grandissez avec les meilleurs talents de votre ville.</p>
-        <div class="d-flex gap-2 mt-3">
-          <a href="#" class="tko-icon-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="tko-icon-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="tko-icon-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="tko-icon-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);"><i class="bi bi-instagram"></i></a>
+      <div class="col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <div class="tko-logo-icon">T</div>
+          <span class="tko-logo-text">Tikoo</span>
         </div>
+        <p style="font-size:13px;max-width:260px;">Le réseau social professionnel de proximité pour l'Afrique.</p>
       </div>
-      <div class="col-6 col-lg-2"><h6 style="font-weight:700;color:#fff;margin-bottom:1rem;">Produit</h6><div class="d-flex flex-column gap-2" style="font-size:14px;"><a href="feed.html">Fil d'actualité</a><a href="search.html">Recherche IA</a><a href="map.html">Carte locale</a><a href="jobs.html">Emplois</a><a href="messages.html">Messagerie</a></div></div>
-      <div class="col-6 col-lg-2"><h6 style="font-weight:700;color:#fff;margin-bottom:1rem;">Profils</h6><div class="d-flex flex-column gap-2" style="font-size:14px;"><a href="professional-profile.html">Professionnel</a><a href="business-page.html">Entreprise</a><a href="jobs.html">Recruteur</a></div></div>
-      <div class="col-6 col-lg-2"><h6 style="font-weight:700;color:#fff;margin-bottom:1rem;">Villes</h6><div class="d-flex flex-column gap-2" style="font-size:14px;"><a href="#">Douala</a><a href="#">Yaoundé</a><a href="#">Bafoussam</a><a href="#">Buea</a><a href="#">Garoua</a></div></div>
-      <div class="col-6 col-lg-2"><h6 style="font-weight:700;color:#fff;margin-bottom:1rem;">Aide</h6><div class="d-flex flex-column gap-2" style="font-size:14px;"><a href="#">Centre d'aide</a><a href="#">Contact</a><a href="#">Confidentialité</a><a href="#">CGU</a></div></div>
+      <div class="col-md-2"><h6 style="color:#fff;margin-bottom:.75rem;font-size:13px;font-weight:700;">Produit</h6><div style="display:flex;flex-direction:column;gap:.4rem;font-size:13px;"><a href="feed.html">Fil d'actualité</a><a href="search.html">Recherche</a><a href="map.html">Carte</a><a href="jobs.html">Emplois</a></div></div>
+      <div class="col-md-2"><h6 style="color:#fff;margin-bottom:.75rem;font-size:13px;font-weight:700;">Compte</h6><div style="display:flex;flex-direction:column;gap:.4rem;font-size:13px;"><a href="sign-in.html">Connexion</a><a href="sign-up.html">Inscription</a><a href="professional-profile.html">Profil pro</a><a href="business-page.html">Page business</a></div></div>
+      <div class="col-md-4"><h6 style="color:#fff;margin-bottom:.75rem;font-size:13px;font-weight:700;">Contact</h6><p style="font-size:13px;"><i class="bi bi-geo-alt-fill"></i> Douala, Akwa &mdash; Cameroun<br><i class="bi bi-envelope-fill"></i> hello@tikoo.cm<br><i class="bi bi-telephone-fill"></i> +237 6XX XXX XXX</p></div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-      <p style="margin:0;font-size:13px;">&copy; 2026 Tikoo. Tous droits réservés. Fait avec &#10084; au Cameroun.</p>
-      <div class="d-flex gap-3" style="font-size:13px;"><a href="#">Confidentialité</a><a href="#">CGU</a><a href="#">Cookies</a></div>
+    <div class="border-top pt-3" style="border-color:rgba(255,255,255,.1)!important;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:12px;">
+      <span>&copy; 2025 Tikoo. Tous droits réservés.</span>
+      <div class="d-flex gap-3"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">CGU</a></div>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body></html>
+</body>
+</html>
