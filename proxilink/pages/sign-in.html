@@ -2,77 +2,67 @@
 <html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion — Tikoo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Connexion – Tikoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
 </head>
 <body>
 <div class="tko-auth-layout">
   <!-- LEFT -->
   <div class="tko-auth-left">
-    <div class="d-flex align-items-center gap-2 mb-5">
+    <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none mb-5">
       <div class="tko-logo-icon">T</div>
-      <span class="tko-logo-text" style="color:#fff;">Tikoo</span>
-    </div>
-    <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Retrouvez votre réseau professionnel</h2>
-    <p style="opacity:.8;font-size:15px;margin-bottom:2rem;">Des milliers de professionnels vérifiés vous attendent. Reconnectez-vous et continuez à construire votre réseau local.</p>
-    <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:1.25rem;max-width:320px;">
-      <div class="d-flex align-items-center gap-3 mb-3">
-        <img src="https://i.pravatar.cc/48?img=12" style="width:48px;height:48px;border-radius:50%;border:2px solid rgba(255,255,255,.3);" alt="">
-        <div>
-          <div style="font-weight:600;">Serge Ateba</div>
-          <div style="font-size:12px;opacity:.7;">Photographe Pro • Douala</div>
-          <div style="color:#7EDFC0;font-size:12px;">&#9733; 4.9 • 127 avis</div>
-        </div>
+      <span class="tko-logo-text" style="color:#7EDFC0;">Tikoo</span>
+    </a>
+    <h2 style="font-size:1.875rem;font-weight:800;line-height:1.2;margin-bottom:1rem;">Le réseau des professionnels africains</h2>
+    <p style="opacity:.8;font-size:15px;line-height:1.7;margin-bottom:2.5rem;">Connectez-vous aux meilleurs talents, prestataires et opportunités d’affaires près de chez vous.</p>
+    <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1.25rem;">
+      <div class="tko-stars mb-2" style="font-size:13px;">★★★★★</div>
+      <p style="font-size:14px;font-style:italic;opacity:.9;margin-bottom:1rem;">«Tikoo a transformé ma façon de trouver des clients. En 2 semaines, j’avais 8 nouveaux contrats.»</p>
+      <div class="d-flex align-items-center gap-2">
+        <img src="https://i.pravatar.cc/36?img=25" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.3);">
+        <div><div style="font-weight:600;font-size:13px;">Marie Bella</div><div style="font-size:11px;opacity:.7;">Comptable OHADA · Yaoundé Bastos</div></div>
       </div>
-      <p style="font-size:13px;opacity:.8;margin:0;">&laquo;&nbsp;Tikoo m'a permis de multiplier ma clientèle par 3 en moins de 6 mois.&nbsp;&raquo;</p>
     </div>
+    <div class="mt-auto pt-4" style="font-size:12px;opacity:.5;">En vous connectant, vous acceptez nos <a href="#" style="color:#7EDFC0;">CGU</a> et notre <a href="#" style="color:#7EDFC0;">Politique de confidentialité</a>.</div>
   </div>
   <!-- RIGHT -->
   <div class="tko-auth-right">
     <div class="tko-auth-card">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
-          <h3 style="font-weight:800;font-size:1.4rem;color:var(--tko-text);">Connexion</h3>
-          <p style="color:var(--tko-text-muted);font-size:13px;margin-top:.25rem;">Bon retour parmi nous !</p>
+          <h3 style="font-weight:700;margin-bottom:.25rem;color:var(--tko-text);">Bon retour 👋</h3>
+          <p class="text-tko-muted" style="font-size:14px;margin:0;">Connectez-vous à votre compte Tikoo.</p>
         </div>
         <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
       </div>
-      <!-- OAuth -->
-      <div class="d-flex gap-2 mb-3">
-        <button class="btn-tko-outline d-flex align-items-center gap-2 justify-content-center" style="flex:1;font-size:13px;"><i class="bi bi-google" style="color:#EA4335;"></i> Google</button>
-        <button class="btn-tko-outline d-flex align-items-center gap-2 justify-content-center" style="flex:1;font-size:13px;"><i class="bi bi-linkedin" style="color:#0A66C2;"></i> LinkedIn</button>
-      </div>
-      <div class="tko-divider">ou par e-mail</div>
-      <!-- Form -->
-      <form onsubmit="event.preventDefault(); window.location='feed.html';">
+      <form onsubmit="window.location='feed.html';return false;">
         <div class="tko-form-group">
-          <label class="tko-form-label">Adresse e-mail</label>
-          <input type="email" class="tko-form-control" placeholder="vous@example.cm" required>
+          <label class="tko-form-label">Email ou téléphone</label>
+          <div class="tko-input-icon-wrap"><i class="bi bi-envelope"></i><input type="email" class="tko-form-control" placeholder="exemple@email.com"></div>
         </div>
         <div class="tko-form-group">
-          <div class="d-flex justify-content-between align-items-center mb-1">
-            <label class="tko-form-label" style="margin:0;">Mot de passe</label>
-            <a href="#" style="font-size:12px;color:var(--tko-primary);">Mot de passe oublié ?</a>
-          </div>
-          <div style="position:relative;">
-            <input type="password" class="tko-form-control" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" id="pwd" required>
-            <button type="button" onclick="var i=document.getElementById('pwd');i.type=i.type==='password'?'text':'password';" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--tko-text-muted);cursor:pointer;"><i class="bi bi-eye"></i></button>
-          </div>
+          <label class="tko-form-label">Mot de passe</label>
+          <div class="tko-input-icon-wrap"><i class="bi bi-lock"></i><input type="password" class="tko-form-control" placeholder="••••••••"></div>
         </div>
-        <div class="d-flex align-items-center gap-2 mb-4">
-          <input type="checkbox" id="remember" class="form-check-input" style="accent-color:var(--tko-primary);width:16px;height:16px;">
-          <label for="remember" style="font-size:13px;color:var(--tko-text-secondary);">Se souvenir de moi</label>
+        <div class="d-flex justify-content-between align-items-center mb-3" style="font-size:13px;">
+          <label class="d-flex align-items-center gap-2" style="cursor:pointer;"><input type="checkbox" style="accent-color:var(--tko-primary);"> Se souvenir de moi</label>
+          <a href="#" class="text-tko-primary">Mot de passe oublié ?</a>
         </div>
-        <button type="submit" class="btn-tko-primary" style="width:100%;justify-content:center;padding:.7rem;"><i class="bi bi-box-arrow-in-right"></i> Se connecter</button>
+        <button type="submit" class="btn-tko-primary justify-content-center" style="width:100%;padding:.7rem;"><i class="bi bi-box-arrow-in-right"></i> Se connecter</button>
       </form>
-      <p style="text-align:center;margin-top:1.25rem;font-size:13px;color:var(--tko-text-muted);">Pas encore de compte ? <a href="sign-up.html" style="color:var(--tko-primary);font-weight:600;">S'inscrire gratuitement</a></p>
+      <div class="tko-divider">ou continuer avec</div>
+      <div class="d-flex gap-3">
+        <button class="btn-tko-outline justify-content-center" style="width:100%;padding:.6rem;" onclick="window.location='feed.html'"><i class="bi bi-google"></i> Google</button>
+        <button class="btn-tko-outline justify-content-center" style="width:100%;padding:.6rem;" onclick="window.location='feed.html'"><i class="bi bi-linkedin"></i> LinkedIn</button>
+      </div>
+      <p class="text-center text-tko-muted mt-4" style="font-size:13px;">Pas encore de compte ? <a href="sign-up.html" class="text-tko-primary" style="font-weight:600;">S’inscrire gratuitement</a></p>
     </div>
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body>
-</html>
+</body></html>

@@ -2,10 +2,11 @@
 <html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Résultats : Plombier Douala — Tikoo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Résultats de recherche – Tikoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
 </head>
 <body>
@@ -13,175 +14,165 @@
 <div class="tko-app-wrapper">
   <aside class="tko-sidebar" id="tko-sidebar">
     <div class="tko-sidebar-logo"><div class="tko-logo-icon">T</div><span class="tko-logo-text">Tikoo</span></div>
-    <nav class="tko-nav-wrap">
+    <div class="tko-nav-wrap">
       <a href="feed.html" class="tko-nav-item"><i class="bi bi-house-door-fill"></i> Accueil</a>
       <a href="search.html" class="tko-nav-item active"><i class="bi bi-search"></i> Rechercher</a>
       <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
       <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
       <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
-      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications</a>
-      <p class="tko-nav-section">Mon espace</p>
-      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon profil</a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Alertes <span class="tko-nav-badge">7</span></a>
+      <p class="tko-nav-section">Mon Espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
+      <a href="business-page.html" class="tko-nav-item"><i class="bi bi-building"></i> Page Business</a>
       <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
-    </nav>
-    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt=""><div class="tko-sidebar-footer-info"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="border:none;background:transparent;width:28px;height:28px;"><i class="bi bi-moon-fill"></i></button></div>
+    </div>
+    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt="Jean-Baptiste"><div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;flex-shrink:0;"><i class="bi bi-moon-fill"></i></button></div>
   </aside>
   <div class="tko-main-content">
     <div class="tko-topbar">
-      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:20px;"></i></button>
-      <div class="tko-topbar-search">
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle style="border:none;background:transparent;"><i class="bi bi-list" style="font-size:22px;"></i></button>
+      <div class="tko-topbar-search" style="max-width:600px;">
         <i class="bi bi-search search-icon"></i>
-        <input type="text" value="Plombier Douala Akwa" class="tko-search-smart">
+        <input type="text" value="Photographe professionnel Douala" class="tko-search-smart">
       </div>
       <div class="tko-topbar-actions">
         <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
-        <img src="https://i.pravatar.cc/36?img=32" class="tko-avatar" alt="">
+        <img src="https://i.pravatar.cc/36?img=32" alt="Avatar" class="tko-avatar" onclick="window.location='professional-profile.html'">
       </div>
     </div>
     <div class="tko-page-content">
-      <!-- AI Summary -->
-      <div class="tko-card mb-3" style="border-left:3px solid var(--tko-primary);">
-        <div class="tko-card-body" style="padding:.875rem 1.25rem;">
-          <div style="display:flex;align-items:center;gap:.5rem;font-size:12px;color:var(--tko-primary);font-weight:700;margin-bottom:.35rem;"><i class="bi bi-robot"></i> Tikoo IA</div>
-          <p style="font-size:13px;color:var(--tko-text-secondary);margin:0;">J'ai trouvé <strong>18 plombiers disponibles</strong> dans un rayon de 5 km autour d'Akwa, Douala. 6 sont disponibles maintenant. Les mieux notés sont Yves Kamga (4.9★) et Rodrigue Ekeme (4.8★).</p>
-        </div>
+      <!-- AI INTERPRETATION -->
+      <div style="background:var(--tko-primary-light);border:1px solid var(--tko-primary);border-radius:var(--tko-radius);padding:1rem 1.25rem;margin-bottom:1.25rem;display:flex;align-items:flex-start;gap:.75rem;">
+        <i class="bi bi-robot" style="color:var(--tko-primary);font-size:20px;flex-shrink:0;margin-top:1px;"></i>
+        <div><div style="font-weight:600;font-size:14px;color:var(--tko-text);margin-bottom:.25rem;">Tikoo IA a compris votre demande</div><div style="font-size:13px;color:var(--tko-text-secondary);">Vous cherchez un <strong>photographe professionnel</strong> disponible à <strong>Douala</strong>. J’ai trouvé <strong>24 profils</strong> correspondants, triés par proximité et note.</div></div>
+        <a href="map-split.html" class="btn-tko-outline btn-tko-sm ms-auto" style="flex-shrink:0;"><i class="bi bi-map"></i> Carte</a>
       </div>
-      <!-- Tabs -->
-      <div class="tko-tabs-wrap mb-3">
-        <button class="tko-tab active">Tous (18)</button>
-        <button class="tko-tab">Personnes (4)</button>
-        <button class="tko-tab">Professionnels (18)</button>
+
+      <!-- RESULT TABS -->
+      <div class="tko-tabs-wrap mb-4">
+        <button class="tko-tab active">Tous (24)</button>
+        <button class="tko-tab">Personnes (8)</button>
+        <button class="tko-tab">Professionnels (12)</button>
         <button class="tko-tab">Entreprises (3)</button>
-        <button class="tko-tab">Services (22)</button>
-        <button class="tko-tab">Publications (7)</button>
+        <button class="tko-tab">Services (1)</button>
+        <button class="tko-tab">Emplois (0)</button>
       </div>
-      <div class="row g-3">
-        <!-- Filters -->
-        <div class="col-lg-3 d-none d-lg-block">
+
+      <div class="row g-4">
+        <!-- FILTERS (left) -->
+        <div class="col-md-3 d-none d-md-block">
           <div class="tko-card">
-            <div class="tko-card-header">Filtres</div>
+            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;color:var(--tko-text);"><i class="bi bi-sliders"></i> Filtres</span><button class="btn-tko-ghost" style="font-size:12px;">Réinit.</button></div>
             <div class="tko-card-body">
-              <div class="mb-3">
+              <div style="margin-bottom:1.25rem;">
                 <label class="tko-form-label">Distance</label>
-                <input type="range" class="form-range" min="1" max="20" value="5" style="accent-color:var(--tko-primary);">
-                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--tko-text-muted);"><span>1 km</span><span style="font-weight:600;color:var(--tko-primary);">5 km</span><span>20 km</span></div>
+                <input type="range" min="0" max="50" value="15" style="accent-color:var(--tko-primary);width:100%;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--tko-text-muted);"><span>0 km</span><span style="color:var(--tko-primary);font-weight:600;">15 km</span></div>
               </div>
-              <div class="mb-3">
+              <div style="margin-bottom:1.25rem;">
                 <label class="tko-form-label">Disponibilité</label>
-                <div class="d-flex flex-column gap-1">
-                  <label style="font-size:13px;display:flex;align-items:center;gap:.5rem;"><input type="checkbox" checked style="accent-color:var(--tko-primary);"> Disponible maintenant</label>
-                  <label style="font-size:13px;display:flex;align-items:center;gap:.5rem;"><input type="checkbox" style="accent-color:var(--tko-primary);"> Aujourd'hui</label>
-                  <label style="font-size:13px;display:flex;align-items:center;gap:.5rem;"><input type="checkbox" style="accent-color:var(--tko-primary);"> Cette semaine</label>
+                <div style="display:flex;flex-direction:column;gap:.5rem;font-size:13px;">
+                  <label class="d-flex gap-2" style="cursor:pointer;"><input type="checkbox" checked style="accent-color:var(--tko-primary);"> Disponible maintenant</label>
+                  <label class="d-flex gap-2" style="cursor:pointer;"><input type="checkbox" style="accent-color:var(--tko-primary);"> Aujourd’hui</label>
+                  <label class="d-flex gap-2" style="cursor:pointer;"><input type="checkbox" style="accent-color:var(--tko-primary);"> Cette semaine</label>
                 </div>
               </div>
-              <div class="mb-3">
-                <label class="tko-form-label">Note minimum</label>
+              <div style="margin-bottom:1.25rem;">
+                <label class="tko-form-label">Note minimale</label>
                 <div class="d-flex gap-1 tko-chip-group">
-                  <button class="tko-chip">3+</button>
-                  <button class="tko-chip active">4+</button>
-                  <button class="tko-chip">4.5+</button>
+                  <button class="tko-chip" style="padding:.3rem .6rem;font-size:12px;">4+</button>
+                  <button class="tko-chip active" style="padding:.3rem .6rem;font-size:12px;">4.5+</button>
+                  <button class="tko-chip" style="padding:.3rem .6rem;font-size:12px;">5 ★</button>
                 </div>
               </div>
               <div>
-                <label class="tko-form-label">Vérifié</label>
-                <label style="font-size:13px;display:flex;align-items:center;gap:.5rem;"><input type="checkbox" checked style="accent-color:var(--tko-primary);"> Profils vérifiés seulement</label>
+                <label class="tko-form-label">Vérification</label>
+                <label class="d-flex gap-2" style="cursor:pointer;font-size:13px;"><input type="checkbox" checked style="accent-color:var(--tko-primary);"> Profils vérifiés uniquement</label>
               </div>
             </div>
           </div>
         </div>
-        <!-- Results -->
-        <div class="col-lg-6">
-          <div class="d-flex align-items-center justify-content-between mb-2">
-            <span style="font-size:13px;color:var(--tko-text-muted);">18 résultats · triés par pertinence</span>
-            <select class="tko-form-control" style="width:auto;padding:.3rem .75rem;font-size:12px;"><option>Pertinence</option><option>Distance</option><option>Note</option></select>
+
+        <!-- RESULTS -->
+        <div class="col-md-9">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+            <span style="font-size:14px;color:var(--tko-text-muted);">24 résultats pour <strong style="color:var(--tko-text);">"Photographe Douala"</strong></span>
+            <select class="tko-form-control" style="width:auto;font-size:13px;">
+              <option>Trier : Proximité</option><option>Trier : Note</option><option>Trier : Disponibilité</option>
+            </select>
           </div>
-          <!-- Result cards -->
-          <div class="d-flex flex-column gap-2">
+          <div style="display:flex;flex-direction:column;gap:.875rem;">
+            <!-- Result 1 -->
             <div class="tko-pro-card" onclick="window.location='professional-profile.html'">
               <div class="d-flex gap-3">
-                <div style="position:relative;">
-                  <img src="https://i.pravatar.cc/56?img=68" class="pro-avatar" alt="">
-                  <span class="online-dot" style="position:absolute;bottom:2px;right:2px;width:12px;height:12px;"></span>
-                </div>
+                <div style="position:relative;flex-shrink:0;"><img src="https://i.pravatar.cc/56?img=12" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--tko-border);"><span class="online-dot" style="position:absolute;bottom:2px;right:2px;"></span></div>
                 <div style="flex:1;min-width:0;">
-                  <div class="d-flex align-items-center gap-1 flex-wrap">
-                    <span style="font-weight:700;font-size:14px;">Yves Kamga</span>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <span style="font-weight:700;font-size:15px;color:var(--tko-text);">Serge Ateba</span>
                     <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> Vérifié</span>
-                    <span class="badge-tko badge-tko-success ms-auto">Disponible</span>
+                    <span class="badge-tko badge-tko-success" style="font-size:10px;">Disponible</span>
                   </div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin:.2rem 0;">Plombier certifié · Akwa, Douala</div>
-                  <div class="d-flex align-items-center gap-2">
-                    <span class="tko-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    <span style="font-size:12px;font-weight:600;">4.9</span>
-                    <span style="font-size:12px;color:var(--tko-text-muted);">(94 avis)</span>
-                    <span style="font-size:12px;color:var(--tko-text-muted);"><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> 0.8 km</span>
+                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.375rem;">Photographe Professionnel &amp; Vidéaste</div>
+                  <div class="d-flex flex-wrap gap-3" style="font-size:12px;color:var(--tko-text-muted);">
+                    <span><i class="bi bi-geo-alt"></i> Bonapriso, Douala &bull; 1.2 km</span>
+                    <span class="tko-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:var(--tko-text-muted);">4.9 (127 avis)</span></span>
                   </div>
-                  <div style="font-size:12px;color:var(--tko-text-secondary);margin-top:.35rem;">Intervention en urgence, fuites, installation sanitaire. 20 000 – 60 000 FCFA.</div>
-                  <div class="d-flex gap-2 mt-2">
-                    <button class="btn-tko-primary" style="padding:.35rem .875rem;font-size:12px;"><i class="bi bi-send-fill"></i> Contacter</button>
-                    <button class="btn-tko-outline" style="padding:.35rem .875rem;font-size:12px;"><i class="bi bi-telephone-fill"></i> Appeler</button>
-                  </div>
+                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-top:.5rem;">Corporate, mariage, événementiel. À partir de 50 000 FCFA/session.</div>
+                </div>
+                <div class="d-flex flex-column gap-2 align-items-end flex-shrink-0">
+                  <button class="btn-tko-primary btn-tko-sm"><i class="bi bi-chat-dots"></i> Contacter</button>
+                  <button class="btn-tko-outline btn-tko-sm"><i class="bi bi-person"></i> Profil</button>
                 </div>
               </div>
             </div>
+            <!-- Result 2 -->
             <div class="tko-pro-card" onclick="window.location='professional-profile.html'">
               <div class="d-flex gap-3">
-                <img src="https://i.pravatar.cc/56?img=72" class="pro-avatar" alt="">
+                <img src="https://i.pravatar.cc/56?img=44" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--tko-border);flex-shrink:0;">
                 <div style="flex:1;min-width:0;">
-                  <div class="d-flex align-items-center gap-1 flex-wrap">
-                    <span style="font-weight:700;font-size:14px;">Rodrigue Ekeme</span>
-                    <span class="badge-verified"><i class="bi bi-patch-check-fill"></i></span>
-                    <span class="badge-tko badge-tko-warning ms-auto">Occupé – dispo 18h</span>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <span style="font-weight:700;font-size:15px;color:var(--tko-text);">Camélia Ndoumbou</span>
+                    <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> Vérifiée</span>
                   </div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin:.2rem 0;">Plombier · Bali, Douala</div>
-                  <div class="d-flex align-items-center gap-2">
-                    <span class="tko-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    <span style="font-size:12px;font-weight:600;">4.8</span>
-                    <span style="font-size:12px;color:var(--tko-text-muted);">(72 avis)</span>
-                    <span style="font-size:12px;color:var(--tko-text-muted);"><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> 1.4 km</span>
+                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.375rem;">Photographe – Mode &amp; Corporate</div>
+                  <div class="d-flex flex-wrap gap-3" style="font-size:12px;color:var(--tko-text-muted);">
+                    <span><i class="bi bi-geo-alt"></i> Akwa, Douala &bull; 2.1 km</span>
+                    <span class="tko-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:var(--tko-text-muted);">4.8 (93 avis)</span></span>
                   </div>
-                  <div style="font-size:12px;color:var(--tko-text-secondary);margin-top:.35rem;">Plomberie générale, chauffage, climatisation. 15 000 – 50 000 FCFA.</div>
-                  <div class="d-flex gap-2 mt-2">
-                    <button class="btn-tko-primary" style="padding:.35rem .875rem;font-size:12px;"><i class="bi bi-send-fill"></i> Contacter</button>
-                    <button class="btn-tko-outline" style="padding:.35rem .875rem;font-size:12px;"><i class="bi bi-calendar"></i> Réserver</button>
-                  </div>
+                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-top:.5rem;">Spécialiste mode, lookbook, catalogue produit. 65 000 FCFA/session.</div>
+                </div>
+                <div class="d-flex flex-column gap-2 align-items-end flex-shrink-0">
+                  <button class="btn-tko-primary btn-tko-sm"><i class="bi bi-chat-dots"></i> Contacter</button>
+                  <button class="btn-tko-outline btn-tko-sm"><i class="bi bi-person"></i> Profil</button>
                 </div>
               </div>
             </div>
+            <!-- Result 3 -->
             <div class="tko-pro-card" onclick="window.location='professional-profile.html'">
               <div class="d-flex gap-3">
-                <img src="https://i.pravatar.cc/56?img=15" class="pro-avatar" alt="">
+                <img src="https://i.pravatar.cc/56?img=69" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--tko-border);flex-shrink:0;">
                 <div style="flex:1;min-width:0;">
-                  <div class="d-flex align-items-center gap-1 flex-wrap">
-                    <span style="font-weight:700;font-size:14px;">Samuel Moukouri</span>
-                    <span class="badge-tko badge-tko-success ms-auto">Disponible</span>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <span style="font-weight:700;font-size:15px;color:var(--tko-text);">Emmanuel Fokou</span>
+                    <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> Vérifié</span>
                   </div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin:.2rem 0;">Plombier · Bonamoussadi</div>
-                  <div class="d-flex align-items-center gap-2">
-                    <span class="tko-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                    <span style="font-size:12px;font-weight:600;">4.6</span>
-                    <span style="font-size:12px;color:var(--tko-text-muted);">(48 avis)</span>
-                    <span style="font-size:12px;color:var(--tko-text-muted);"><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> 2.2 km</span>
+                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.375rem;">Photographe &amp; Réalisateur</div>
+                  <div class="d-flex flex-wrap gap-3" style="font-size:12px;color:var(--tko-text-muted);">
+                    <span><i class="bi bi-geo-alt"></i> Bali, Douala &bull; 3.8 km</span>
+                    <span class="tko-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--tko-text-muted);">4.6 (58 avis)</span></span>
                   </div>
-                  <div class="d-flex gap-2 mt-2">
-                    <button class="btn-tko-primary" style="padding:.35rem .875rem;font-size:12px;"><i class="bi bi-send-fill"></i> Contacter</button>
-                  </div>
+                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-top:.5rem;">Spécialiste vidéo pub, clip musical, tournage corporate. 80 000 FCFA/jour.</div>
+                </div>
+                <div class="d-flex flex-column gap-2 align-items-end flex-shrink-0">
+                  <button class="btn-tko-primary btn-tko-sm"><i class="bi bi-chat-dots"></i> Contacter</button>
+                  <button class="btn-tko-outline btn-tko-sm"><i class="bi bi-person"></i> Profil</button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- Map Preview -->
-        <div class="col-lg-3 d-none d-lg-block">
-          <div class="tko-card" style="position:sticky;top:1rem;">
-            <div class="tko-map-mock" style="height:300px;border-radius:var(--tko-radius) var(--tko-radius) 0 0;">
-              <div class="tko-map-marker" style="top:30%;left:40%;"><i class="bi bi-person-fill"></i></div>
-              <div class="tko-map-marker" style="top:50%;left:55%;width:28px;height:28px;"><i class="bi bi-person-fill" style="font-size:12px;"></i></div>
-              <div class="tko-map-marker" style="top:65%;left:35%;width:28px;height:28px;"><i class="bi bi-person-fill" style="font-size:12px;"></i></div>
-              <div class="tko-map-pill" style="bottom:12px;left:50%;transform:translateX(-50%);"><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> Akwa, Douala</div>
-            </div>
-            <div class="tko-card-body" style="padding:.875rem;">
-              <a href="map.html" class="btn-tko-outline" style="width:100%;justify-content:center;"><i class="bi bi-map-fill"></i> Voir sur la carte</a>
+            <!-- Skeleton loaders -->
+            <div style="display:flex;gap:.75rem;padding:1.25rem;background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:var(--tko-radius);">
+              <div class="tko-skeleton" style="width:56px;height:56px;border-radius:50%;flex-shrink:0;"></div>
+              <div style="flex:1;"><div class="tko-skeleton" style="height:14px;width:55%;margin-bottom:.5rem;"></div><div class="tko-skeleton" style="height:12px;width:40%;margin-bottom:.5rem;"></div><div class="tko-skeleton" style="height:12px;width:70%;"></div></div>
             </div>
           </div>
         </div>
@@ -192,11 +183,10 @@
 <nav class="tko-bottom-nav">
   <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
   <a href="search.html" class="tko-bottom-nav-item active"><i class="bi bi-search"></i><span>Recherche</span></a>
-  <div class="tko-bottom-nav-fab"><a href="#" class="fab"><i class="bi bi-plus-lg"></i></a></div>
+  <div class="tko-bottom-fab-wrap"><a href="feed.html" class="tko-bottom-fab"><i class="bi bi-plus-lg"></i></a></div>
   <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
   <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body>
-</html>
+</body></html>
