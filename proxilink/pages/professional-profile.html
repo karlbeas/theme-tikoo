@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Serge Ateba – Photographe Pro – Tikoo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serge Ateba — Photographe Pro — Tikoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
-  <style>.review-card{background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;}.skill-tag{display:inline-flex;align-items:center;background:var(--tko-surface-alt);border:1px solid var(--tko-border);border-radius:var(--tko-radius-sm);padding:.3rem .75rem;font-size:12px;color:var(--tko-text-secondary);margin:.2rem;}</style>
+  <style>.review-card{background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;}.portfolio-img{width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);cursor:pointer;transition:transform .2s;}.portfolio-img:hover{transform:scale(1.03);}</style>
 </head>
 <body>
 <div class="tko-overlay" id="tko-overlay"></div>
@@ -20,215 +20,158 @@
       <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
       <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
       <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
-      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications <span class="tko-nav-badge">7</span></a>
-      <p class="tko-nav-section">Mon Espace</p>
-      <a href="professional-profile.html" class="tko-nav-item active"><i class="bi bi-person-fill"></i> Mon Profil</a>
-      <a href="business-page.html" class="tko-nav-item"><i class="bi bi-building"></i> Page Business</a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications</a>
+      <p class="tko-nav-section">Mon espace</p>
+      <a href="professional-profile.html" class="tko-nav-item active"><i class="bi bi-person-fill"></i> Mon profil</a>
       <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
     </nav>
-    <div class="tko-sidebar-footer">
-      <img src="https://i.pravatar.cc/36?img=32" alt="">
-      <div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web &middot; Douala</div></div>
-      <button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;"><i class="bi bi-moon-fill"></i></button>
-    </div>
+    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt=""><div class="tko-sidebar-footer-info"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="border:none;background:transparent;width:28px;height:28px;"><i class="bi bi-moon-fill"></i></button></div>
   </aside>
   <div class="tko-main-content">
     <div class="tko-topbar">
-      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:22px;"></i></button>
-      <button class="btn-tko-ghost" onclick="history.back()"><i class="bi bi-arrow-left"></i> Retour</button>
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:20px;"></i></button>
+      <button class="tko-icon-btn" onclick="history.back();"><i class="bi bi-arrow-left"></i></button>
+      <span style="font-weight:700;font-size:15px;">Profil Professionnel</span>
       <div class="tko-topbar-actions">
         <button class="tko-icon-btn"><i class="bi bi-share"></i></button>
+        <button class="tko-icon-btn"><i class="bi bi-three-dots"></i></button>
         <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
-        <img src="https://i.pravatar.cc/38?img=32" alt="" class="tko-avatar">
+        <img src="https://i.pravatar.cc/36?img=32" class="tko-avatar" alt="">
       </div>
     </div>
     <div class="tko-page-content">
-      <div class="row g-4">
+      <div class="row g-3" style="max-width:1000px;margin:0 auto;">
         <div class="col-lg-8">
           <!-- Profile Card -->
-          <div class="tko-card mb-4">
+          <div class="tko-card mb-3">
             <div class="tko-profile-cover">
-              <img src="https://picsum.photos/900/200?random=20" alt="cover">
-              <div class="tko-profile-avatar-wrap"><img src="https://i.pravatar.cc/88?img=12" class="tko-profile-avatar" alt=""></div>
+              <img src="https://picsum.photos/900/200?random=10" alt="" style="width:100%;height:100%;object-fit:cover;">
+              <div class="tko-profile-avatar-wrap">
+                <img src="https://i.pravatar.cc/88?img=12" class="tko-profile-avatar" alt="">
+              </div>
             </div>
-            <div class="tko-card-body" style="padding-top:3.5rem;">
-              <div class="d-flex align-items-flex-start justify-content-between flex-wrap gap-3">
+            <div class="tko-card-body" style="padding-top:3.25rem;">
+              <div class="d-flex align-items-flex-start justify-content-between flex-wrap gap-2">
                 <div>
-                  <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
-                    <h3 style="font-weight:800;letter-spacing:-.02em;color:var(--tko-text);margin:0;">Serge Ateba</h3>
-                    <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> Vérifié</span>
-                    <span class="badge-tko badge-tko-success">Disponible</span>
-                  </div>
-                  <p style="font-size:15px;color:var(--tko-text-secondary);margin-bottom:.5rem;">&#128247; Photographe Professionnel &middot; Cinématographe</p>
-                  <div class="d-flex align-items-center gap-3 flex-wrap" style="font-size:13px;color:var(--tko-text-muted);">
-                    <span><i class="bi bi-geo-alt-fill text-tko-primary"></i> Bonapriso, Douala</span>
-                    <span><i class="bi bi-star-fill" style="color:#F59E0B;"></i> <strong style="color:var(--tko-text);">4.9</strong> (148 avis)</span>
-                    <span><i class="bi bi-people-fill text-tko-primary"></i> 1 240 abonnés</span>
-                    <span><i class="bi bi-briefcase-fill text-tko-primary"></i> 8 ans d'exp.</span>
+                  <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:.25rem;">Serge Ateba <span class="badge-verified"><i class="bi bi-patch-check-fill"></i> Vérifié</span></h2>
+                  <div style="font-size:14px;color:var(--tko-text-secondary);margin-bottom:.35rem;">Photographe Professionnel · Vidéaste</div>
+                  <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <span style="font-size:13px;color:var(--tko-text-muted);"><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> Bonapriso, Douala</span>
+                    <span style="font-size:13px;"><span class="tko-stars">&#9733;</span> <strong>4.9</strong> (127 avis)</span>
+                    <span class="badge-tko badge-tko-success"><i class="bi bi-circle-fill" style="font-size:8px;"></i> Disponible</span>
                   </div>
                 </div>
-                <div class="d-flex flex-wrap gap-2">
-                  <button class="btn-tko-primary" onclick="window.location='messages.html'"><i class="bi bi-chat-dots-fill"></i> Message</button>
-                  <button class="btn-tko-outline"><i class="bi bi-telephone-fill"></i> Appeler</button>
-                  <button class="btn-tko-outline"><i class="bi bi-calendar-check"></i> Réserver</button>
-                  <button class="btn-tko-ghost"><i class="bi bi-person-plus"></i> Suivre</button>
+                <div class="d-flex gap-2 flex-wrap">
+                  <button class="btn-tko-primary" onclick="window.location='messages.html';"><i class="bi bi-chat-dots-fill"></i> Message</button>
+                  <button class="btn-tko-outline"><i class="bi bi-person-plus-fill"></i> Suivre</button>
+                  <button class="tko-icon-btn"><i class="bi bi-telephone-fill"></i></button>
                 </div>
+              </div>
+              <div class="d-flex gap-4 mt-3 pt-3" style="border-top:1px solid var(--tko-border-light);">
+                <div style="text-align:center;"><div style="font-weight:800;font-size:16px;">127</div><div style="font-size:11px;color:var(--tko-text-muted);">Avis</div></div>
+                <div style="text-align:center;"><div style="font-weight:800;font-size:16px;">2.4K</div><div style="font-size:11px;color:var(--tko-text-muted);">Suivis</div></div>
+                <div style="text-align:center;"><div style="font-weight:800;font-size:16px;">98%</div><div style="font-size:11px;color:var(--tko-text-muted);">Satisfaction</div></div>
+                <div style="text-align:center;"><div style="font-weight:800;font-size:16px;">6 ans</div><div style="font-size:11px;color:var(--tko-text-muted);">Expérience</div></div>
               </div>
             </div>
           </div>
-
           <!-- About -->
-          <div class="tko-card mb-4">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">&#128218; À propos</span></div>
+          <div class="tko-card mb-3">
+            <div class="tko-card-header"><i class="bi bi-person-fill text-tko-primary"></i> À propos</div>
             <div class="tko-card-body">
-              <p style="color:var(--tko-text-secondary);font-size:14px;line-height:1.7;">Photographe professionnel passionné, basé à Douala avec 8 ans d'expérience. Je me spécialise dans la photographie d'événements d'entreprise, les portraits professionnels, la photographie de produits et les reportages institutionnels.</p>
-              <p style="color:var(--tko-text-secondary);font-size:14px;line-height:1.7;margin:0;">Mes clients incluent des grandes entreprises camerounaises, des ONG internationales et des personnalités publiques. Devis gratuit en 24h. Livraison des photos retouches sous 48h.</p>
-            </div>
-          </div>
-
-          <!-- Services -->
-          <div class="tko-card mb-4">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">&#127796; Services &amp; Tarifs</span></div>
-            <div class="tko-card-body">
-              <div class="row g-3">
-                <div class="col-sm-6"><div style="border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;">
-                  <div style="font-weight:600;font-size:13px;color:var(--tko-text);margin-bottom:.25rem;">Portrait professionnel</div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin-bottom:.5rem;">CV, LinkedIn, profil d'entreprise</div>
-                  <div class="tko-salary">50 000 – 80 000 FCFA</div>
-                </div></div>
-                <div class="col-sm-6"><div style="border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;">
-                  <div style="font-weight:600;font-size:13px;color:var(--tko-text);margin-bottom:.25rem;">Événement corporate</div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin-bottom:.5rem;">Séminaire, conférence, gala</div>
-                  <div class="tko-salary">150 000 – 400 000 FCFA</div>
-                </div></div>
-                <div class="col-sm-6"><div style="border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;">
-                  <div style="font-weight:600;font-size:13px;color:var(--tko-text);margin-bottom:.25rem;">Photo produit / catalogue</div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin-bottom:.5rem;">E-commerce, brochure, site web</div>
-                  <div class="tko-salary">80 000 – 200 000 FCFA</div>
-                </div></div>
-                <div class="col-sm-6"><div style="border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;">
-                  <div style="font-weight:600;font-size:13px;color:var(--tko-text);margin-bottom:.25rem;">Vidéo institutionnelle</div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);margin-bottom:.5rem;">Reportage, pub, présentation</div>
-                  <div class="tko-salary">à partir de 300 000 FCFA</div>
-                </div></div>
+              <p style="font-size:14px;color:var(--tko-text-secondary);line-height:1.7;">Photographe professionnel basé à Douala avec plus de 6 ans d'expérience. Spécialiste en portraits corporate, événementiel, shooting produit et reportage entreprise. Je travaille avec les PME et grandes entreprises camerounaises pour créer des visuels percutants.</p>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="tko-chip active" style="cursor:default;"><i class="bi bi-camera-fill"></i> Portrait</span>
+                <span class="tko-chip active" style="cursor:default;">Evénementiel</span>
+                <span class="tko-chip active" style="cursor:default;">Produit</span>
+                <span class="tko-chip active" style="cursor:default;">Corporate</span>
+                <span class="tko-chip active" style="cursor:default;">Vidéo</span>
               </div>
             </div>
           </div>
-
-          <!-- Portfolio -->
-          <div class="tko-card mb-4">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">&#127758; Portfolio</span></div>
+          <!-- Services -->
+          <div class="tko-card mb-3">
+            <div class="tko-card-header"><i class="bi bi-list-check text-tko-primary"></i> Services</div>
             <div class="tko-card-body">
               <div class="row g-2">
-                <div class="col-4"><img src="https://picsum.photos/300/200?random=31" style="width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);cursor:pointer;" alt=""></div>
-                <div class="col-4"><img src="https://picsum.photos/300/200?random=32" style="width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);cursor:pointer;" alt=""></div>
-                <div class="col-4"><img src="https://picsum.photos/300/200?random=33" style="width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);cursor:pointer;" alt=""></div>
-                <div class="col-4"><img src="https://picsum.photos/300/200?random=34" style="width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);cursor:pointer;" alt=""></div>
-                <div class="col-4"><img src="https://picsum.photos/300/200?random=35" style="width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);cursor:pointer;" alt=""></div>
-                <div class="col-4" style="position:relative;cursor:pointer;">
-                  <img src="https://picsum.photos/300/200?random=36" style="width:100%;height:120px;object-fit:cover;border-radius:var(--tko-radius-sm);" alt="">
-                  <div style="position:absolute;inset:0;background:rgba(0,0,0,.5);border-radius:var(--tko-radius-sm);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;">+24</div>
-                </div>
+                <div class="col-6"><div style="background:var(--tko-bg);border:1px solid var(--tko-border);border-radius:var(--tko-radius-sm);padding:.875rem;"><div style="font-weight:600;font-size:13px;">Portrait professionnel</div><div class="tko-salary">45 000 FCFA</div><div style="font-size:12px;color:var(--tko-text-muted);">1h de session</div></div></div>
+                <div class="col-6"><div style="background:var(--tko-bg);border:1px solid var(--tko-border);border-radius:var(--tko-radius-sm);padding:.875rem;"><div style="font-weight:600;font-size:13px;">Événement / cérémonie</div><div class="tko-salary">120 000 FCFA</div><div style="font-size:12px;color:var(--tko-text-muted);">Journée complète</div></div></div>
+                <div class="col-6"><div style="background:var(--tko-bg);border:1px solid var(--tko-border);border-radius:var(--tko-radius-sm);padding:.875rem;"><div style="font-weight:600;font-size:13px;">Shooting produit</div><div class="tko-salary">60 000 FCFA</div><div style="font-size:12px;color:var(--tko-text-muted);">Pack 20 photos</div></div></div>
+                <div class="col-6"><div style="background:var(--tko-bg);border:1px solid var(--tko-border);border-radius:var(--tko-radius-sm);padding:.875rem;"><div style="font-weight:600;font-size:13px;">Vidéo corporate</div><div class="tko-salary">200 000 FCFA</div><div style="font-size:12px;color:var(--tko-text-muted);">2-3 min montée</div></div></div>
               </div>
             </div>
           </div>
-
-          <!-- Skills -->
-          <div class="tko-card mb-4">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">&#127891; Compétences</span></div>
+          <!-- Portfolio -->
+          <div class="tko-card mb-3">
+            <div class="tko-card-header"><i class="bi bi-images text-tko-primary"></i> Portfolio</div>
             <div class="tko-card-body">
-              <div>
-                <span class="skill-tag">Adobe Lightroom</span><span class="skill-tag">Adobe Photoshop</span>
-                <span class="skill-tag">DaVinci Resolve</span><span class="skill-tag">Canon EOS R5</span>
-                <span class="skill-tag">Sony A7 III</span><span class="skill-tag">Drone DJI</span>
-                <span class="skill-tag">Strobiste</span><span class="skill-tag">Photo produit</span>
-                <span class="skill-tag">Retouche beauté</span><span class="skill-tag">Studio photo</span>
+              <div class="row g-2">
+                <div class="col-4"><img src="https://picsum.photos/200/120?random=11" class="portfolio-img" alt=""></div>
+                <div class="col-4"><img src="https://picsum.photos/200/120?random=12" class="portfolio-img" alt=""></div>
+                <div class="col-4"><img src="https://picsum.photos/200/120?random=13" class="portfolio-img" alt=""></div>
+                <div class="col-4"><img src="https://picsum.photos/200/120?random=14" class="portfolio-img" alt=""></div>
+                <div class="col-4"><img src="https://picsum.photos/200/120?random=15" class="portfolio-img" alt=""></div>
+                <div class="col-4" style="position:relative;"><img src="https://picsum.photos/200/120?random=16" class="portfolio-img" alt="" style="filter:brightness(.5);"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;">+24</div></div>
               </div>
             </div>
           </div>
-
-          <!-- Experience -->
-          <div class="tko-card mb-4">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">&#128188; Expérience</span></div>
-            <div class="tko-card-body">
-              <div class="d-flex flex-column gap-3">
-                <div style="display:flex;gap:1rem;">
-                  <div style="width:44px;height:44px;border-radius:var(--tko-radius-sm);background:var(--tko-primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-camera-fill text-tko-primary" style="font-size:20px;"></i></div>
-                  <div>
-                    <div style="font-weight:600;font-size:14px;color:var(--tko-text);">Photographe Indépendant</div>
-                    <div style="font-size:13px;color:var(--tko-text-secondary);">Freelance &middot; Douala</div>
-                    <div style="font-size:12px;color:var(--tko-text-muted);">2018 &ndash; Présent &middot; 6 ans</div>
-                    <p style="font-size:13px;color:var(--tko-text-secondary);margin-top:.5rem;margin-bottom:0;">Photographie corporate, événementielle et commerciale pour des clients privés et institutionnels.</p>
-                  </div>
-                </div>
-                <div style="display:flex;gap:1rem;">
-                  <div style="width:44px;height:44px;border-radius:var(--tko-radius-sm);background:var(--tko-surface-alt);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-building text-tko-secondary" style="font-size:20px;"></i></div>
-                  <div>
-                    <div style="font-weight:600;font-size:14px;color:var(--tko-text);">Chef Photographe</div>
-                    <div style="font-size:13px;color:var(--tko-text-secondary);">Canal+ Cameroun &middot; Yaoundé</div>
-                    <div style="font-size:12px;color:var(--tko-text-muted);">2016 &ndash; 2018 &middot; 2 ans</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Reviews -->
-          <div class="tko-card">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">&#11088; Avis clients (148)</span></div>
-            <div class="tko-card-body">
-              <div class="row g-3 mb-3">
-                <div class="col-sm-3 text-center">
-                  <div style="font-size:3rem;font-weight:800;color:var(--tko-primary);">4.9</div>
-                  <div style="color:#F59E0B;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                  <div style="font-size:12px;color:var(--tko-text-muted);">148 avis</div>
+          <div class="tko-card mb-3">
+            <div class="tko-card-header"><i class="bi bi-star-fill text-tko-primary"></i> Avis (127) &nbsp;<span style="font-size:14px;font-weight:400;color:var(--tko-text-muted);">Moy. 4.9/5</span><a href="#" style="font-size:12px;color:var(--tko-primary);margin-left:auto;">Voir tout</a></div>
+            <div class="tko-card-body" style="display:flex;flex-direction:column;gap:.75rem;">
+              <div class="review-card">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <img src="https://i.pravatar.cc/32?img=35" style="width:32px;height:32px;border-radius:50%;" alt="">
+                  <div><div style="font-weight:600;font-size:13px;">Isabelle Mfou</div><div class="tko-stars" style="font-size:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+                  <span style="margin-left:auto;font-size:11px;color:var(--tko-text-muted);">il y a 2 semaines</span>
                 </div>
-                <div class="col-sm-9">
-                  <div class="d-flex flex-column gap-1">
-                    <div class="d-flex align-items-center gap-2"><span style="font-size:12px;width:16px;">5</span><div style="flex:1;height:6px;background:var(--tko-border);border-radius:4px;"><div style="width:80%;height:100%;background:var(--tko-primary);border-radius:4px;"></div></div><span style="font-size:12px;color:var(--tko-text-muted);">118</span></div>
-                    <div class="d-flex align-items-center gap-2"><span style="font-size:12px;width:16px;">4</span><div style="flex:1;height:6px;background:var(--tko-border);border-radius:4px;"><div style="width:14%;height:100%;background:var(--tko-accent);border-radius:4px;"></div></div><span style="font-size:12px;color:var(--tko-text-muted);">21</span></div>
-                    <div class="d-flex align-items-center gap-2"><span style="font-size:12px;width:16px;">3</span><div style="flex:1;height:6px;background:var(--tko-border);border-radius:4px;"><div style="width:4%;height:100%;background:var(--tko-warning);border-radius:4px;"></div></div><span style="font-size:12px;color:var(--tko-text-muted);">6</span></div>
-                    <div class="d-flex align-items-center gap-2"><span style="font-size:12px;width:16px;">2</span><div style="flex:1;height:6px;background:var(--tko-border);border-radius:4px;"><div style="width:2%;height:100%;background:var(--tko-danger);border-radius:4px;"></div></div><span style="font-size:12px;color:var(--tko-text-muted);">3</span></div>
-                  </div>
-                </div>
+                <p style="font-size:13px;color:var(--tko-text-secondary);margin:0;">Excellent professionnel ! Les photos de mon mariage sont magnifiques. Très à l'écoute et ponctuel. Je recommande vivement.</p>
               </div>
-              <div class="d-flex flex-column gap-3">
-                <div class="review-card"><div class="d-flex align-items-center gap-2 mb-2"><img src="https://i.pravatar.cc/36?img=43" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Gérard Mbenga</div><div style="font-size:11px;color:var(--tko-text-muted);">DG Agence Lumière &middot; il y a 2 semaines</div></div><div style="color:#F59E0B;font-size:12px;margin-left:auto;">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div><p style="font-size:13px;color:var(--tko-text-secondary);margin:0;">Serge est exceptionnel. Il a réalisé notre séance photo annuelle d'entreprise avec un professionnalisme remarquable. Les photos sont superbes et livrées dans les délais. Je recommande vivement !</p></div>
-                <div class="review-card"><div class="d-flex align-items-center gap-2 mb-2"><img src="https://i.pravatar.cc/36?img=33" style="width:36px;height:36px;border-radius:50%;" alt=""><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Sylvie Essama</div><div style="font-size:11px;color:var(--tko-text-muted);">Marketing Manager &middot; il y a 1 mois</div></div><div style="color:#F59E0B;font-size:12px;margin-left:auto;">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div><p style="font-size:13px;color:var(--tko-text-secondary);margin:0;">Photos de mariage absolument magnifiques. Serge a su capturer tous les moments importants avec beaucoup de sensibilité. Très professionnel et agréable.</p></div>
+              <div class="review-card">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <img src="https://i.pravatar.cc/32?img=45" style="width:32px;height:32px;border-radius:50%;" alt="">
+                  <div><div style="font-weight:600;font-size:13px;">Patrick Nkomo</div><div class="tko-stars" style="font-size:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+                  <span style="margin-left:auto;font-size:11px;color:var(--tko-text-muted);">il y a 1 mois</span>
+                </div>
+                <p style="font-size:13px;color:var(--tko-text-secondary);margin:0;">Nous avons fait appel à Serge pour notre shooting corporate annuel. Qualité exceptionnelle et livraison dans les délais.</p>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- RIGHT -->
+        <!-- Sidebar -->
         <div class="col-lg-4">
-          <div class="tko-card mb-3" style="position:sticky;top:80px;">
+          <!-- CTA Card -->
+          <div class="tko-card mb-3" style="position:sticky;top:1rem;">
             <div class="tko-card-body">
-              <div class="d-flex flex-column gap-3">
-                <button class="btn-tko-primary w-100 justify-content-center" style="padding:.7rem;"><i class="bi bi-calendar-check-fill"></i> Réserver une séance</button>
-                <button class="btn-tko-outline w-100 justify-content-center" onclick="window.location='messages.html'"><i class="bi bi-chat-dots-fill"></i> Envoyer un message</button>
-                <button class="btn-tko-outline w-100 justify-content-center"><i class="bi bi-telephone-fill"></i> Appeler (+237 6XX XXX XXX)</button>
-                <button class="btn-tko-ghost w-100 justify-content-center"><i class="bi bi-whatsapp" style="color:#22C55E;"></i> WhatsApp</button>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <div class="online-dot"></div>
+                <span style="font-size:13px;color:var(--tko-text-secondary);">Disponible maintenant</span>
+              </div>
+              <button class="btn-tko-primary" style="width:100%;justify-content:center;margin-bottom:.5rem;" onclick="window.location='messages.html';"><i class="bi bi-chat-dots-fill"></i> Envoyer un message</button>
+              <button class="btn-tko-outline" style="width:100%;justify-content:center;margin-bottom:.5rem;"><i class="bi bi-telephone-fill"></i> Appeler</button>
+              <button class="btn-tko-outline" style="width:100%;justify-content:center;margin-bottom:.5rem;"><i class="bi bi-calendar-check-fill"></i> Réserver</button>
+              <div style="border-top:1px solid var(--tko-border-light);margin-top:.75rem;padding-top:.75rem;">
+                <div style="font-size:13px;color:var(--tko-text-muted);display:flex;flex-direction:column;gap:.5rem;">
+                  <span><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> Bonapriso · Douala</span>
+                  <span><i class="bi bi-clock-fill" style="color:var(--tko-primary);"></i> Répond en moins de 1h</span>
+                  <span><i class="bi bi-whatsapp" style="color:#25D366;"></i> WhatsApp disponible</span>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Experience -->
           <div class="tko-card mb-3">
-            <div class="tko-card-body">
-              <div style="font-weight:700;font-size:13px;margin-bottom:.75rem;color:var(--tko-text);">Informations</div>
-              <div class="d-flex flex-column gap-2" style="font-size:13px;">
-                <div class="d-flex gap-2"><i class="bi bi-geo-alt-fill text-tko-primary"></i><span style="color:var(--tko-text-secondary);">Bonapriso, Douala &middot; Zone couverte : tout Douala</span></div>
-                <div class="d-flex gap-2"><i class="bi bi-clock-fill text-tko-primary"></i><span style="color:var(--tko-text-secondary);">Disponible Lun-Sam, 8h00–18h00</span></div>
-                <div class="d-flex gap-2"><i class="bi bi-translate text-tko-primary"></i><span style="color:var(--tko-text-secondary);">Français, Anglais, Bassa</span></div>
-                <div class="d-flex gap-2"><i class="bi bi-link-45deg text-tko-primary"></i><a href="#" style="color:var(--tko-primary);">sergeateba.cm</a></div>
+            <div class="tko-card-header">Expérience</div>
+            <div class="tko-card-body" style="display:flex;flex-direction:column;gap:.75rem;">
+              <div>
+                <div style="font-weight:600;font-size:13px;">Photographe Indépendant</div>
+                <div style="font-size:12px;color:var(--tko-primary);">Freelance · 2019 &ndash; Présent</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">Douala, Cameroun</div>
               </div>
-            </div>
-          </div>
-          <div class="tko-card">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:13px;">Zone d'intervention</span></div>
-            <div class="tko-map-mock" style="height:180px;border-radius:0 0 var(--tko-radius) var(--tko-radius);">
-              <div style="position:relative;z-index:1;text-align:center;">
-                <i class="bi bi-geo-alt-fill" style="font-size:2rem;color:var(--tko-primary);"></i>
-                <div style="font-size:13px;font-weight:600;color:var(--tko-primary);">Tout Douala</div>
+              <div style="border-top:1px solid var(--tko-border-light);padding-top:.75rem;">
+                <div style="font-weight:600;font-size:13px;">Assistant Photographe</div>
+                <div style="font-size:12px;color:var(--tko-primary);">Studio Pixel · 2017 &ndash; 2019</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">Yaoundé, Cameroun</div>
               </div>
             </div>
           </div>
@@ -237,13 +180,14 @@
     </div>
   </div>
 </div>
-<nav class="tko-bottom-nav d-flex justify-content-around">
+<nav class="tko-bottom-nav">
   <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
   <a href="search.html" class="tko-bottom-nav-item"><i class="bi bi-search"></i><span>Recherche</span></a>
-  <div class="tko-bnav-fab"><div class="fab"><i class="bi bi-plus-lg"></i></div></div>
-  <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
+  <div class="tko-bottom-nav-fab"><a href="#" class="fab"><i class="bi bi-plus-lg"></i></a></div>
+  <a href="messages.html" class="tko-bottom-nav-item"><i class="bi bi-chat-dots-fill"></i><span>Messages</span></a>
   <a href="professional-profile.html" class="tko-bottom-nav-item active"><i class="bi bi-person-fill"></i><span>Profil</span></a>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body></html>
+</body>
+</html>

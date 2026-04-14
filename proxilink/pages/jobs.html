@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Emplois &amp; Opportunités – Tikoo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emplois &amp; Opportunités — Tikoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
 </head>
 <body>
@@ -19,168 +19,178 @@
       <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
       <a href="jobs.html" class="tko-nav-item active"><i class="bi bi-briefcase-fill"></i> Emplois</a>
       <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
-      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications <span class="tko-nav-badge">7</span></a>
-      <p class="tko-nav-section">Mon Espace</p>
-      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
-      <a href="business-page.html" class="tko-nav-item"><i class="bi bi-building"></i> Page Business</a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications</a>
+      <p class="tko-nav-section">Mon espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon profil</a>
       <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
     </nav>
-    <div class="tko-sidebar-footer">
-      <img src="https://i.pravatar.cc/36?img=32" alt="">
-      <div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web &middot; Douala</div></div>
-      <button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;"><i class="bi bi-moon-fill"></i></button>
-    </div>
+    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt=""><div class="tko-sidebar-footer-info"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="border:none;background:transparent;width:28px;height:28px;"><i class="bi bi-moon-fill"></i></button></div>
   </aside>
   <div class="tko-main-content">
     <div class="tko-topbar">
-      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:22px;"></i></button>
-      <div class="tko-topbar-search"><i class="bi bi-search search-icon"></i><input type="text" placeholder="Rechercher un emploi, poste, compétence..." class="tko-search-smart"></div>
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:20px;"></i></button>
+      <div class="tko-topbar-search d-none d-md-block">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" placeholder="Rechercher un emploi, une entreprise..." class="tko-search-smart">
+      </div>
       <div class="tko-topbar-actions">
-        <button class="btn-tko-primary" style="font-size:13px;padding:.45rem 1rem;"><i class="bi bi-plus-lg"></i> Publier une offre</button>
+        <button class="btn-tko-primary" style="padding:.4rem .875rem;font-size:13px;"><i class="bi bi-plus-lg"></i> Publier</button>
         <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
-        <img src="https://i.pravatar.cc/38?img=32" alt="" class="tko-avatar">
+        <img src="https://i.pravatar.cc/36?img=32" class="tko-avatar" alt="">
       </div>
     </div>
     <div class="tko-page-content">
-      <!-- Search Hero -->
-      <div style="background:linear-gradient(140deg,#0F2B22,var(--tko-primary));border-radius:var(--tko-radius-lg);padding:2rem;color:#fff;margin-bottom:1.5rem;">
-        <h4 style="font-weight:800;letter-spacing:-.03em;margin-bottom:.5rem;">Trouvez votre prochain emploi au Cameroun</h4>
-        <p style="opacity:.8;font-size:14px;margin-bottom:1.25rem;">134 offres d'emploi locales actuellement disponibles</p>
-        <div class="row g-2">
-          <div class="col-md-5"><div style="position:relative;"><i class="bi bi-search" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--tko-primary);"></i><input type="text" placeholder="Titre, compétence..." style="width:100%;background:#fff;border:none;border-radius:8px;padding:.6rem 1rem .6rem 2.5rem;font-size:14px;color:var(--tko-text);"></div></div>
-          <div class="col-md-5"><div style="position:relative;"><i class="bi bi-geo-alt" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--tko-primary);"></i><input type="text" placeholder="Ville (ex: Douala)" value="Douala" style="width:100%;background:#fff;border:none;border-radius:8px;padding:.6rem 1rem .6rem 2.5rem;font-size:14px;color:var(--tko-text);"></div></div>
-          <div class="col-md-2"><button class="btn-tko-primary w-100" style="border-radius:8px;padding:.6rem;">Chercher</button></div>
+      <!-- Hero -->
+      <div class="tko-search-hero mb-4">
+        <div class="row align-items-center">
+          <div class="col-md-7">
+            <div style="font-size:12px;opacity:.7;letter-spacing:.08em;text-transform:uppercase;font-weight:600;"><i class="bi bi-briefcase-fill"></i> Emplois &amp; Opportunités</div>
+            <h2 style="font-size:1.6rem;font-weight:800;margin:.5rem 0;">Trouvez votre prochain poste</h2>
+            <p style="opacity:.8;font-size:14px;margin-bottom:1rem;">1 200+ offres actives au Cameroun. Candidature rapide, matching local.</p>
+            <div class="tko-search-bar-wrap">
+              <i class="bi bi-search search-icon-lg"></i>
+              <input type="text" class="tko-search-bar-large tko-search-smart" placeholder="Intitulé, compétence ou ville..." style="padding-right:.875rem;">
+            </div>
+          </div>
+          <div class="col-md-5 d-none d-md-flex justify-content-end align-items-center gap-3">
+            <div style="text-align:center;color:#fff;"><div style="font-size:1.75rem;font-weight:800;color:#7EDFC0;">1.2K</div><div style="font-size:12px;opacity:.8;">Offres actives</div></div>
+            <div style="text-align:center;color:#fff;"><div style="font-size:1.75rem;font-weight:800;color:#7EDFC0;">320</div><div style="font-size:12px;opacity:.8;">Entreprises</div></div>
+            <div style="text-align:center;color:#fff;"><div style="font-size:1.75rem;font-weight:800;color:#7EDFC0;">8.4K</div><div style="font-size:12px;opacity:.8;">Candidats</div></div>
+          </div>
         </div>
       </div>
       <!-- Filters -->
-      <div class="d-flex gap-2 flex-wrap mb-3">
-        <div class="tko-chip-group d-flex gap-2 flex-wrap" data-multi="false">
-          <button class="tko-chip active">Toutes les offres</button>
+      <div class="d-flex gap-2 mb-3 flex-wrap">
+        <div class="tko-chip-group d-flex gap-2">
+          <button class="tko-chip active">Tous</button>
           <button class="tko-chip">CDI</button>
           <button class="tko-chip">CDD</button>
           <button class="tko-chip">Freelance</button>
           <button class="tko-chip">Stage</button>
-          <button class="tko-chip">Télétravail</button>
         </div>
+        <select class="tko-form-control" style="width:auto;padding:.3rem .75rem;font-size:13px;margin-left:auto;"><option>Toutes les villes</option><option>Douala</option><option>Yaoundé</option></select>
       </div>
-      <div class="row g-4">
-        <div class="col-lg-8">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
-            <span style="font-size:14px;font-weight:600;color:var(--tko-text);">134 offres trouvées</span>
-            <select class="tko-form-control" style="width:auto;"><option>Plus récentes</option><option>Salaire ↑</option><option>Pertinence</option></select>
-          </div>
-          <div class="d-flex flex-column gap-3">
-            <!-- Job 1 -->
-            <div class="tko-job-card" onclick="window.location='job-detail.html'">
-              <div class="d-flex gap-3">
-                <div style="width:52px;height:52px;background:var(--tko-primary);border-radius:var(--tko-radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-weight:800;font-size:14px;color:#fff;">TS</span></div>
-                <div style="flex:1;">
-                  <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
-                    <span style="font-weight:700;font-size:14px;color:var(--tko-text);">Développeur Full-Stack React/Node.js</span>
-                    <span class="badge-tko badge-tko-info">Nouveau</span>
-                  </div>
-                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.25rem;">Tech Solutions Cameroun &middot; Bonamoussadi, Douala</div>
-                  <div class="d-flex align-items-center gap-3 flex-wrap" style="font-size:12px;color:var(--tko-text-muted);">
-                    <span><i class="bi bi-briefcase"></i> CDI</span><span><i class="bi bi-clock"></i> Télétravail 3j/sem</span><span><i class="bi bi-calendar"></i> Il y a 2j</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 mt-2">
-                    <span class="tko-salary">300 000 – 450 000 FCFA/mois</span>
-                    <div style="margin-left:auto;display:flex;gap:.5rem;">
-                      <button class="tko-icon-btn" onclick="event.stopPropagation();"><i class="bi bi-bookmark"></i></button>
-                      <button class="btn-tko-primary" style="padding:.4rem 1rem;font-size:12px;">Postuler</button>
-                    </div>
-                  </div>
-                </div>
+      <!-- Jobs Grid -->
+      <div class="row g-3">
+        <div class="col-md-6 col-xl-4">
+          <div class="tko-job-card" onclick="window.location='job-detail.html'">
+            <div class="d-flex gap-3 mb-3">
+              <div style="width:48px;height:48px;border-radius:10px;background:var(--tko-primary-light);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--tko-primary);flex-shrink:0;">TC</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:700;font-size:14px;">Développeur Full-Stack</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">TechCam Solutions</div>
               </div>
+              <button class="tko-icon-btn" style="border:none;flex-shrink:0;"><i class="bi bi-bookmark"></i></button>
             </div>
-            <!-- Job 2 -->
-            <div class="tko-job-card" onclick="window.location='job-detail.html'">
-              <div class="d-flex gap-3">
-                <div style="width:52px;height:52px;background:#1D4ED8;border-radius:var(--tko-radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-weight:800;font-size:14px;color:#fff;">FC</span></div>
-                <div style="flex:1;">
-                  <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
-                    <span style="font-weight:700;font-size:14px;color:var(--tko-text);">Responsable Marketing Digital</span>
-                    <span class="badge-tko badge-tko-warning">Urgent</span>
-                  </div>
-                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.25rem;">Fintech Cameroun &middot; Bastos, Yaoundé</div>
-                  <div class="d-flex align-items-center gap-3 flex-wrap" style="font-size:12px;color:var(--tko-text-muted);">
-                    <span><i class="bi bi-briefcase"></i> CDI</span><span><i class="bi bi-building"></i> Présentiel</span><span><i class="bi bi-calendar"></i> Il y a 1j</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 mt-2">
-                    <span class="tko-salary">350 000 – 500 000 FCFA/mois</span>
-                    <div style="margin-left:auto;display:flex;gap:.5rem;">
-                      <button class="tko-icon-btn" onclick="event.stopPropagation();"><i class="bi bi-bookmark"></i></button>
-                      <button class="btn-tko-primary" style="padding:.4rem 1rem;font-size:12px;">Postuler</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="d-flex flex-wrap gap-1 mb-2">
+              <span class="badge-tko badge-tko-primary">CDI</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-geo-alt"></i> Yaoundé</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-laptop"></i> Télétravail partiel</span>
             </div>
-            <!-- Job 3 -->
-            <div class="tko-job-card" onclick="window.location='job-detail.html'">
-              <div class="d-flex gap-3">
-                <div style="width:52px;height:52px;background:var(--tko-primary);border-radius:var(--tko-radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-weight:800;font-size:14px;color:#fff;">AL</span></div>
-                <div style="flex:1;">
-                  <div style="font-weight:700;font-size:14px;color:var(--tko-text);margin-bottom:.25rem;">Designer UI/UX &ndash; Freelance</div>
-                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.25rem;">Agence Lumière &middot; Akwa, Douala</div>
-                  <div class="d-flex align-items-center gap-3 flex-wrap" style="font-size:12px;color:var(--tko-text-muted);">
-                    <span><i class="bi bi-briefcase"></i> Freelance</span><span><i class="bi bi-clock"></i> Télétravail</span><span><i class="bi bi-calendar"></i> Il y a 3j</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 mt-2">
-                    <span class="tko-salary">150 000 – 250 000 FCFA/projet</span>
-                    <div style="margin-left:auto;display:flex;gap:.5rem;">
-                      <button class="tko-icon-btn" onclick="event.stopPropagation();"><i class="bi bi-bookmark"></i></button>
-                      <button class="btn-tko-primary" style="padding:.4rem 1rem;font-size:12px;">Postuler</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Job 4 -->
-            <div class="tko-job-card" onclick="window.location='job-detail.html'">
-              <div class="d-flex gap-3">
-                <div style="width:52px;height:52px;background:#7C3AED;border-radius:var(--tko-radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-weight:800;font-size:14px;color:#fff;">SB</span></div>
-                <div style="flex:1;">
-                  <div style="font-weight:700;font-size:14px;color:var(--tko-text);margin-bottom:.25rem;">Comptable OHADA</div>
-                  <div style="font-size:13px;color:var(--tko-text-secondary);margin-bottom:.25rem;">SagemCom Cameroun &middot; Bali, Douala</div>
-                  <div class="d-flex align-items-center gap-3 flex-wrap" style="font-size:12px;color:var(--tko-text-muted);">
-                    <span><i class="bi bi-briefcase"></i> CDI</span><span><i class="bi bi-building"></i> Présentiel</span><span><i class="bi bi-calendar"></i> Il y a 5j</span>
-                  </div>
-                  <div class="d-flex align-items-center gap-3 mt-2">
-                    <span class="tko-salary">200 000 – 350 000 FCFA/mois</span>
-                    <div style="margin-left:auto;display:flex;gap:.5rem;">
-                      <button class="tko-icon-btn" onclick="event.stopPropagation();"><i class="bi bi-bookmark"></i></button>
-                      <button class="btn-tko-primary" style="padding:.4rem 1rem;font-size:12px;">Postuler</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="tko-salary mb-1">250 000 – 400 000 FCFA/mois</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">Publié il y a 2 jours · 43 candidats</div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="tko-card" style="position:sticky;top:80px;">
-            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">Alertes emploi</span></div>
-            <div class="tko-card-body">
-              <p style="font-size:13px;color:var(--tko-text-muted);margin-bottom:1rem;">Recevez les nouvelles offres correspondant à votre profil par email et notification.</p>
-              <div class="tko-form-group"><label class="tko-form-label">Titre / Compétence</label><input type="text" class="tko-form-control" placeholder="Ex: Développeur React"></div>
-              <div class="tko-form-group"><label class="tko-form-label">Ville</label><input type="text" class="tko-form-control" value="Douala"></div>
-              <div class="tko-form-group"><label class="tko-form-label">Fréquence</label><select class="tko-form-control"><option>Immédiat</option><option>Quotidien</option><option>Hebdomadaire</option></select></div>
-              <button class="btn-tko-primary w-100 justify-content-center"><i class="bi bi-bell-fill"></i> Activer l'alerte</button>
+        <div class="col-md-6 col-xl-4">
+          <div class="tko-job-card" onclick="window.location='job-detail.html'">
+            <div class="d-flex gap-3 mb-3">
+              <div style="width:48px;height:48px;border-radius:10px;background:#FEF3C7;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--tko-warning);flex-shrink:0;">AL</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:700;font-size:14px;">Chef de Projet Marketing</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">Agence Lumière CM</div>
+              </div>
+              <button class="tko-icon-btn" style="border:none;flex-shrink:0;"><i class="bi bi-bookmark"></i></button>
             </div>
+            <div class="d-flex flex-wrap gap-1 mb-2">
+              <span class="badge-tko badge-tko-primary">CDI</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-geo-alt"></i> Douala</span>
+            </div>
+            <div class="tko-salary mb-1">180 000 – 280 000 FCFA/mois</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">Publié il y a 5 jours · 28 candidats</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="tko-job-card">
+            <div class="d-flex gap-3 mb-3">
+              <div style="width:48px;height:48px;border-radius:10px;background:#DBEAFE;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--tko-info);flex-shrink:0;">FB</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:700;font-size:14px;">Comptable Junior</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">FinTech Bras</div>
+              </div>
+              <button class="tko-icon-btn" style="border:none;flex-shrink:0;"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="d-flex flex-wrap gap-1 mb-2">
+              <span class="badge-tko badge-tko-info">Stage</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-geo-alt"></i> Douala</span>
+            </div>
+            <div class="tko-salary mb-1">80 000 FCFA/mois</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">Publié il y a 1 semaine · 17 candidats</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="tko-job-card">
+            <div class="d-flex gap-3 mb-3">
+              <div style="width:48px;height:48px;border-radius:10px;background:#F3E8FF;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#9333EA;flex-shrink:0;">SC</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:700;font-size:14px;">Designer UI/UX</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">StartupCM</div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1 mb-2">
+              <span class="badge-tko badge-tko-primary">Freelance</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-geo-alt"></i> Yaoundé</span>
+              <span class="badge-tko badge-tko-success">Distant</span>
+            </div>
+            <div class="tko-salary mb-1">150 000 – 250 000 FCFA/projet</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">Publié hier · 9 candidats</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="tko-job-card">
+            <div class="d-flex gap-3 mb-3">
+              <div style="width:48px;height:48px;border-radius:10px;background:#DCFCE7;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#15803D;flex-shrink:0;">MF</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:700;font-size:14px;">Responsable Commercial</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">MicroFinance Plus</div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1 mb-2">
+              <span class="badge-tko badge-tko-primary">CDI</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-geo-alt"></i> Douala</span>
+            </div>
+            <div class="tko-salary mb-1">200 000 – 350 000 FCFA/mois</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">Publié il y a 3 jours · 52 candidats</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="tko-job-card">
+            <div class="d-flex gap-3 mb-3">
+              <div style="width:48px;height:48px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--tko-danger);flex-shrink:0;">DC</div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:700;font-size:14px;">Assistant juridique</div>
+                <div style="font-size:12px;color:var(--tko-text-muted);">Cabinet Droit & Conseil</div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1 mb-2">
+              <span class="badge-tko badge-tko-info">CDD</span>
+              <span class="badge-tko badge-tko-gray"><i class="bi bi-geo-alt"></i> Yaoundé</span>
+            </div>
+            <div class="tko-salary mb-1">120 000 – 180 000 FCFA/mois</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">Publié il y a 4 jours · 31 candidats</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<nav class="tko-bottom-nav d-flex justify-content-around">
+<nav class="tko-bottom-nav">
   <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
   <a href="search.html" class="tko-bottom-nav-item"><i class="bi bi-search"></i><span>Recherche</span></a>
-  <div class="tko-bnav-fab"><div class="fab"><i class="bi bi-plus-lg"></i></div></div>
-  <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
+  <div class="tko-bottom-nav-fab"><a href="#" class="fab"><i class="bi bi-plus-lg"></i></a></div>
+  <a href="jobs.html" class="tko-bottom-nav-item active"><i class="bi bi-briefcase-fill"></i><span>Emplois</span></a>
   <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body></html>
+</body>
+</html>
