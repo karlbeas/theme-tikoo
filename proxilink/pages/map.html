@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Carte &amp; Découverte locale – Tikoo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../assets/css/tikoo.css" rel="stylesheet">
+  <style>
+    .map-full{position:fixed;inset:0;left:var(--tko-sidebar-width);top:var(--tko-topbar-height);z-index:1;}
+    @media(max-width:991.98px){.map-full{left:0;}}
+    .map-chips{position:absolute;top:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:10;white-space:nowrap;background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:40px;padding:.3rem;box-shadow:var(--tko-shadow);}
+    .map-side{position:absolute;top:0;right:0;width:320px;height:100%;background:var(--tko-surface);border-left:1px solid var(--tko-border);overflow-y:auto;z-index:10;}
+    .map-card-item{display:flex;gap:.75rem;padding:.875rem 1rem;border-bottom:1px solid var(--tko-border-light);cursor:pointer;transition:background .15s;}
+    .map-card-item:hover{background:var(--tko-bg);}
+    .map-locate{position:absolute;bottom:1.5rem;left:1.5rem;z-index:10;}
+    @media(max-width:991.98px){.map-side{width:100%;position:fixed;bottom:0;top:auto;height:55vh;border-left:none;border-top:1px solid var(--tko-border);border-radius:16px 16px 0 0;}}
+  </style>
+</head>
+<body>
+<div class="tko-overlay" id="tko-overlay"></div>
+<div class="tko-app-wrapper">
+  <aside class="tko-sidebar" id="tko-sidebar">
+    <div class="tko-sidebar-logo"><div class="tko-logo-icon">T</div><span class="tko-logo-text">Tikoo</span></div>
+    <nav class="tko-nav-wrap">
+      <a href="feed.html" class="tko-nav-item"><i class="bi bi-house-door-fill"></i> Accueil</a>
+      <a href="search.html" class="tko-nav-item"><i class="bi bi-search"></i> Rechercher</a>
+      <a href="map.html" class="tko-nav-item active"><i class="bi bi-geo-alt-fill"></i> Carte</a>
+      <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
+      <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications <span class="tko-nav-badge">7</span></a>
+      <p class="tko-nav-section">Mon Espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
+      <a href="business-page.html" class="tko-nav-item"><i class="bi bi-building"></i> Page Business</a>
+      <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
+    </nav>
+    <div class="tko-sidebar-footer" onclick="window.location='professional-profile.html'">
+      <img src="https://i.pravatar.cc/36?img=32" alt="">
+      <div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web &middot; Douala</div></div>
+      <button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;"><i class="bi bi-moon-fill"></i></button>
+    </div>
+  </aside>
+
+  <div class="tko-main-content">
+    <div class="tko-topbar">
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:22px;"></i></button>
+      <div class="tko-topbar-search"><i class="bi bi-search search-icon"></i><input type="text" placeholder="Rechercher sur la carte..." class="tko-search-smart"></div>
+      <div class="tko-topbar-actions">
+        <a href="map-split.html" class="tko-icon-btn" title="Vue liste"><i class="bi bi-layout-split"></i></a>
+        <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
+        <img src="https://i.pravatar.cc/38?img=32" alt="" class="tko-avatar">
+      </div>
+    </div>
+
+    <!-- MAP FULL -->
+    <div style="position:relative;flex:1;overflow:hidden;height:calc(100vh - var(--tko-topbar-height));">
+      <!-- The Map Background -->
+      <div class="tko-map-mock" style="position:absolute;inset:0;">
+        <!-- Fake street lines -->
+        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.25;" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20%" y1="0" x2="35%" y2="100%" stroke="white" stroke-width="8"/>
+          <line x1="60%" y1="0" x2="55%" y2="100%" stroke="white" stroke-width="12"/>
+          <line x1="0" y1="40%" x2="100%" y2="35%" stroke="white" stroke-width="8"/>
+          <line x1="0" y1="70%" x2="100%" y2="65%" stroke="white" stroke-width="6"/>
+          <rect x="35%" y="20%" width="20%" height="15%" fill="rgba(255,255,255,.15)" rx="4"/>
+          <rect x="55%" y="55%" width="15%" height="20%" fill="rgba(255,255,255,.15)" rx="4"/>
+          <rect x="10%" y="50%" width="18%" height="12%" fill="rgba(255,255,255,.15)" rx="4"/>
+        </svg>
+
+        <!-- Category chips -->
+        <div class="map-chips">
+          <button class="tko-chip active" style="font-size:12px;padding:.3rem .75rem;">Tous</button>
+          <button class="tko-chip" style="font-size:12px;padding:.3rem .75rem;"><i class="bi bi-person-badge-fill"></i> Pros</button>
+          <button class="tko-chip" style="font-size:12px;padding:.3rem .75rem;"><i class="bi bi-building"></i> Entreprises</button>
+          <button class="tko-chip" style="font-size:12px;padding:.3rem .75rem;"><i class="bi bi-briefcase-fill"></i> Emplois</button>
+          <button class="tko-chip" style="font-size:12px;padding:.3rem .75rem;"><i class="bi bi-exclamation-circle"></i> Urgent</button>
+        </div>
+
+        <!-- Map Markers -->
+        <div style="position:absolute;top:30%;left:35%;transform:translate(-50%,-100%);cursor:pointer;" onclick="showCard(0)">
+          <div style="width:40px;height:40px;background:var(--tko-primary);border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:var(--tko-shadow-lg);">
+            <i class="bi bi-camera-fill" style="transform:rotate(45deg);color:#fff;font-size:14px;"></i>
+          </div>
+          <div style="background:#fff;border-radius:20px;padding:.2rem .6rem;font-size:11px;font-weight:700;color:var(--tko-text);margin-top:.25rem;text-align:center;box-shadow:var(--tko-shadow-sm);">4.9 &#9733;</div>
+        </div>
+        <div style="position:absolute;top:55%;left:55%;transform:translate(-50%,-100%);cursor:pointer;" onclick="showCard(1)">
+          <div style="width:40px;height:40px;background:#3B82F6;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:var(--tko-shadow-lg);">
+            <i class="bi bi-calculator-fill" style="transform:rotate(45deg);color:#fff;font-size:14px;"></i>
+          </div>
+          <div style="background:#fff;border-radius:20px;padding:.2rem .6rem;font-size:11px;font-weight:700;color:var(--tko-text);margin-top:.25rem;text-align:center;box-shadow:var(--tko-shadow-sm);">4.8 &#9733;</div>
+        </div>
+        <div style="position:absolute;top:45%;left:22%;transform:translate(-50%,-100%);cursor:pointer;" onclick="showCard(2)">
+          <div style="width:40px;height:40px;background:#F59E0B;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:var(--tko-shadow-lg);">
+            <i class="bi bi-lightning-charge-fill" style="transform:rotate(45deg);color:#fff;font-size:14px;"></i>
+          </div>
+          <div style="background:#fff;border-radius:20px;padding:.2rem .6rem;font-size:11px;font-weight:700;color:var(--tko-text);margin-top:.25rem;text-align:center;box-shadow:var(--tko-shadow-sm);">4.7 &#9733;</div>
+        </div>
+
+        <!-- User location -->
+        <div style="position:absolute;top:48%;left:42%;transform:translate(-50%,-50%);">
+          <div style="width:18px;height:18px;background:#1F7A63;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 6px rgba(31,122,99,.2);"></div>
+        </div>
+
+        <!-- Locate btn -->
+        <div class="map-locate">
+          <button class="tko-icon-btn" style="width:44px;height:44px;box-shadow:var(--tko-shadow);"><i class="bi bi-crosshair"></i></button>
+        </div>
+      </div>
+
+      <!-- SIDE PANEL -->
+      <div class="map-side" id="mapSide">
+        <div style="padding:.875rem 1rem;border-bottom:1px solid var(--tko-border);display:flex;align-items:center;justify-content:space-between;">
+          <div>
+            <div style="font-weight:700;font-size:14px;color:var(--tko-text);">Pros proches</div>
+            <div style="font-size:12px;color:var(--tko-text-muted);">47 résultats &middot; moins de 5 km</div>
+          </div>
+          <a href="map-split.html" style="font-size:12px;color:var(--tko-primary);font-weight:500;">Vue liste</a>
+        </div>
+        <div id="mapCards">
+          <div class="map-card-item active" style="background:var(--tko-primary-light);">
+            <img src="https://i.pravatar.cc/48?img=12" style="width:48px;height:48px;border-radius:50%;flex-shrink:0;" alt="">
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:600;font-size:13px;color:var(--tko-text);">Serge Ateba</div>
+              <div style="font-size:12px;color:var(--tko-text-muted);">Photographe &middot; 0.8 km</div>
+              <div style="color:#F59E0B;font-size:12px;">&#9733; 4.9 &middot; <span class="badge-tko badge-tko-success" style="font-size:10px;">Disponible</span></div>
+            </div>
+            <button class="btn-tko-primary" style="padding:.35rem .75rem;font-size:12px;flex-shrink:0;">Voir</button>
+          </div>
+          <div class="map-card-item">
+            <img src="https://i.pravatar.cc/48?img=25" style="width:48px;height:48px;border-radius:50%;flex-shrink:0;" alt="">
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:600;font-size:13px;color:var(--tko-text);">Marie Bella</div>
+              <div style="font-size:12px;color:var(--tko-text-muted);">Comptable &middot; 1.2 km</div>
+              <div style="color:#F59E0B;font-size:12px;">&#9733; 4.8 &middot; <span class="badge-tko badge-tko-success" style="font-size:10px;">Disponible</span></div>
+            </div>
+            <button class="btn-tko-outline" style="padding:.35rem .75rem;font-size:12px;flex-shrink:0;">Voir</button>
+          </div>
+          <div class="map-card-item">
+            <img src="https://i.pravatar.cc/48?img=52" style="width:48px;height:48px;border-radius:50%;flex-shrink:0;" alt="">
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:600;font-size:13px;color:var(--tko-text);">Alain Mbarga</div>
+              <div style="font-size:12px;color:var(--tko-text-muted);">Electricien &middot; 2.1 km</div>
+              <div style="color:#F59E0B;font-size:12px;">&#9733; 4.7 &middot; <span class="badge-tko badge-tko-warning" style="font-size:10px;">Occupé</span></div>
+            </div>
+            <button class="btn-tko-outline" style="padding:.35rem .75rem;font-size:12px;flex-shrink:0;">Voir</button>
+          </div>
+          <div class="map-card-item">
+            <img src="https://i.pravatar.cc/48?img=45" style="width:48px;height:48px;border-radius:50%;flex-shrink:0;" alt="">
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:600;font-size:13px;color:var(--tko-text);">Patrick Nkomo</div>
+              <div style="font-size:12px;color:var(--tko-text-muted);">Dev Full-Stack &middot; 3.4 km</div>
+              <div style="color:#F59E0B;font-size:12px;">&#9733; 4.6 &middot; <span class="badge-tko badge-tko-success" style="font-size:10px;">Disponible</span></div>
+            </div>
+            <button class="btn-tko-outline" style="padding:.35rem .75rem;font-size:12px;flex-shrink:0;">Voir</button>
+          </div>
+          <div class="map-card-item">
+            <img src="https://i.pravatar.cc/48?img=33" style="width:48px;height:48px;border-radius:50%;flex-shrink:0;" alt="">
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:600;font-size:13px;color:var(--tko-text);">Sylvie Essama</div>
+              <div style="font-size:12px;color:var(--tko-text-muted);">Marketing &middot; 4.0 km</div>
+              <div style="color:#F59E0B;font-size:12px;">&#9733; 4.5 &middot; <span class="badge-tko badge-tko-success" style="font-size:10px;">Disponible</span></div>
+            </div>
+            <button class="btn-tko-outline" style="padding:.35rem .75rem;font-size:12px;flex-shrink:0;">Voir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="tko-bottom-nav d-flex justify-content-around">
+  <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
+  <a href="search.html" class="tko-bottom-nav-item"><i class="bi bi-search"></i><span>Recherche</span></a>
+  <div class="tko-bnav-fab"><div class="fab"><i class="bi bi-plus-lg"></i></div></div>
+  <a href="map.html" class="tko-bottom-nav-item active"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
+  <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/tikoo.js"></script>
+<script>function showCard(i){document.querySelectorAll('.map-card-item').forEach(function(c,idx){c.style.background=idx===i?'var(--tko-primary-light)':'';});}</script>
+</body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Recherche IA – Tikoo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../assets/css/tikoo.css" rel="stylesheet">
+  <style>.shortcut-card{background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:1rem;display:flex;align-items:center;gap:.75rem;cursor:pointer;transition:all .2s;}
+  .shortcut-card:hover{border-color:var(--tko-primary);box-shadow:var(--tko-shadow);transform:translateY(-2px);}</style>
+</head>
+<body>
+<div class="tko-overlay" id="tko-overlay"></div>
+<div class="tko-app-wrapper">
+  <!-- SIDEBAR -->
+  <aside class="tko-sidebar" id="tko-sidebar">
+    <div class="tko-sidebar-logo"><div class="tko-logo-icon">T</div><span class="tko-logo-text">Tikoo</span></div>
+    <nav class="tko-nav-wrap">
+      <a href="feed.html" class="tko-nav-item"><i class="bi bi-house-door-fill"></i> Accueil</a>
+      <a href="search.html" class="tko-nav-item active"><i class="bi bi-search"></i> Rechercher</a>
+      <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
+      <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
+      <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications <span class="tko-nav-badge">7</span></a>
+      <p class="tko-nav-section">Mon Espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
+      <a href="business-page.html" class="tko-nav-item"><i class="bi bi-building"></i> Page Business</a>
+      <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
+    </nav>
+    <div class="tko-sidebar-footer" onclick="window.location='professional-profile.html'">
+      <img src="https://i.pravatar.cc/36?img=32" alt="">
+      <div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web &middot; Douala</div></div>
+      <button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;"><i class="bi bi-moon-fill"></i></button>
+    </div>
+  </aside>
+
+  <div class="tko-main-content">
+    <div class="tko-topbar">
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:22px;"></i></button>
+      <span style="font-size:16px;font-weight:700;color:var(--tko-text);">Recherche IA</span>
+      <div class="tko-topbar-actions">
+        <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
+        <img src="https://i.pravatar.cc/38?img=32" alt="" class="tko-avatar">
+      </div>
+    </div>
+
+    <div class="tko-page-content">
+      <!-- SEARCH HERO -->
+      <div class="tko-search-hero mb-4">
+        <div class="text-center mb-4" style="position:relative;z-index:1;">
+          <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:.35rem .875rem;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1rem;"><i class="bi bi-robot"></i> Recherche alimentée par l'IA</span>
+          <h2 style="font-weight:800;font-size:clamp(1.5rem,3.5vw,2rem);letter-spacing:-.03em;margin-bottom:.5rem;">Trouvez le bon professionnel</h2>
+          <p style="opacity:.8;font-size:15px;margin-bottom:1.5rem;">Décrivez votre besoin en français, l'IA trouve le meilleur match près de vous</p>
+        </div>
+        <div class="tko-search-bar-wrap" style="position:relative;z-index:1;">
+          <i class="bi bi-search si"></i>
+          <input type="text" class="tko-search-bar-large tko-search-smart" placeholder="Ex: Trouver un plombier disponible maintenant à Douala Akwa...">
+          <button class="btn-tko-primary sbtn" onclick="window.location='search-results.html'" style="border-radius:40px;"><i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="d-flex flex-wrap gap-2 justify-content-center mt-3" style="position:relative;z-index:1;">
+          <button class="tko-chip" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;font-size:12px;" onclick="this.closest('.tko-search-bar-wrap')?.querySelector('input')?.value || document.querySelector('.tko-search-bar-large').value='Plombier Douala'"><i class="bi bi-droplet-fill"></i> Plombier</button>
+          <button class="tko-chip" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;font-size:12px;"><i class="bi bi-calculator-fill"></i> Comptable</button>
+          <button class="tko-chip" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;font-size:12px;"><i class="bi bi-camera-fill"></i> Photographe</button>
+          <button class="tko-chip" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;font-size:12px;"><i class="bi bi-code-slash"></i> Développeur</button>
+          <button class="tko-chip" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;font-size:12px;"><i class="bi bi-tools"></i> Mécanicien</button>
+          <button class="tko-chip" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;font-size:12px;"><i class="bi bi-briefcase-fill"></i> Emplois</button>
+        </div>
+      </div>
+
+      <!-- AI SUGGESTIONS -->
+      <div class="tko-card mb-4">
+        <div class="tko-card-header"><span style="font-weight:700;font-size:14px;"><i class="bi bi-robot text-tko-primary"></i> Suggestions IA pour vous</span></div>
+        <div class="tko-card-body">
+          <div class="d-flex flex-wrap gap-2">
+            <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-geo-alt-fill text-tko-primary"></i> Plombier à Douala Akwa</button>
+            <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-camera-fill text-tko-primary"></i> Photographe dispo aujourd'hui</button>
+            <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-calculator text-tko-primary"></i> Comptable OHADA certifié</button>
+            <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-code-slash text-tko-primary"></i> Dév React.js freelance</button>
+            <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-translate text-tko-primary"></i> Traducteur anglais urgent</button>
+            <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-building text-tko-primary"></i> Avocat affaires Douala</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHORTCUTS -->
+      <h5 style="font-weight:700;color:var(--tko-text);margin-bottom:1rem;">Recherches rapides</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#E0F2FE;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#128295;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Plombier</div><div style="font-size:11px;color:var(--tko-text-muted);">24 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#FEF3C7;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#9889;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Electricien</div><div style="font-size:11px;color:var(--tko-text-muted);">18 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#FEE2E2;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#128247;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Photographe</div><div style="font-size:11px;color:var(--tko-text-muted);">31 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#DCFCE7;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#128202;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Comptable</div><div style="font-size:11px;color:var(--tko-text-muted);">15 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#F3E8FF;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#9878;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Avocat</div><div style="font-size:11px;color:var(--tko-text-muted);">9 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#E0F2FE;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#128187;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Développeur</div><div style="font-size:11px;color:var(--tko-text-muted);">42 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="search-results.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:#FEF3C7;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#128295;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Mécanicien</div><div style="font-size:11px;color:var(--tko-text-muted);">27 disponibles</div></div></div></a></div>
+        <div class="col-6 col-md-4 col-lg-3"><a href="jobs.html" style="text-decoration:none;"><div class="shortcut-card"><div style="width:40px;height:40px;background:var(--tko-primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#128188;</div><div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Emplois</div><div style="font-size:11px;color:var(--tko-text-muted);">134 offres</div></div></div></a></div>
+      </div>
+
+      <!-- TRENDING -->
+      <h5 style="font-weight:700;color:var(--tko-text);margin-bottom:1rem;">Tendances de recherche</h5>
+      <div class="d-flex flex-wrap gap-2">
+        <button class="tko-chip active" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Plombier Douala urgent</button>
+        <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Comptable OHADA</button>
+        <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Développeur React Yaoundé</button>
+        <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Agence marketing Douala</button>
+        <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Photographe mariage</button>
+        <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Avocat affaires</button>
+        <button class="tko-chip" onclick="window.location='search-results.html'"><i class="bi bi-fire"></i> Menuisier certifié</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="tko-bottom-nav d-flex justify-content-around">
+  <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
+  <a href="search.html" class="tko-bottom-nav-item active"><i class="bi bi-search"></i><span>Recherche</span></a>
+  <div class="tko-bnav-fab"><div class="fab"><i class="bi bi-plus-lg"></i></div></div>
+  <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
+  <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/tikoo.js"></script>
+</body></html>

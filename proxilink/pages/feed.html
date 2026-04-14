@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Accueil – Tikoo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../assets/css/tikoo.css" rel="stylesheet">
+  <style>.right-panel .tko-card{margin-bottom:1rem;}</style>
+</head>
+<body>
+<div class="tko-overlay" id="tko-overlay"></div>
+<div class="tko-app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="tko-sidebar" id="tko-sidebar">
+    <div class="tko-sidebar-logo"><div class="tko-logo-icon">T</div><span class="tko-logo-text">Tikoo</span></div>
+    <nav class="tko-nav-wrap">
+      <a href="feed.html" class="tko-nav-item active"><i class="bi bi-house-door-fill"></i> Accueil</a>
+      <a href="search.html" class="tko-nav-item"><i class="bi bi-search"></i> Rechercher</a>
+      <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
+      <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
+      <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications <span class="tko-nav-badge">7</span></a>
+      <p class="tko-nav-section">Mon Espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
+      <a href="business-page.html" class="tko-nav-item"><i class="bi bi-building"></i> Page Business</a>
+      <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
+    </nav>
+    <div class="tko-sidebar-footer" onclick="window.location='professional-profile.html'">
+      <img src="https://i.pravatar.cc/36?img=32" alt="">
+      <div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web &middot; Douala</div></div>
+      <button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;"><i class="bi bi-moon-fill"></i></button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="tko-main-content">
+    <div class="tko-topbar">
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:22px;"></i></button>
+      <div class="tko-topbar-search d-none d-md-block"><i class="bi bi-search search-icon"></i><input type="text" placeholder="Rechercher des professionnels, services, emplois..." class="tko-search-smart"></div>
+      <div class="tko-topbar-actions">
+        <button class="tko-icon-btn"><i class="bi bi-plus-lg"></i></button>
+        <button class="tko-icon-btn" onclick="window.location='notifications.html'" style="position:relative;"><i class="bi bi-bell"></i><span class="notif-dot"></span></button>
+        <button class="tko-icon-btn d-none d-md-flex" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
+        <img src="https://i.pravatar.cc/38?img=32" alt="" class="tko-avatar" onclick="window.location='professional-profile.html'">
+      </div>
+    </div>
+
+    <div class="tko-page-content">
+      <div class="row g-4">
+        <!-- FEED -->
+        <div class="col-lg-8 col-xl-6">
+          <!-- Tabs -->
+          <div class="tko-tabs-wrap mb-3">
+            <button class="tko-tab active">Pour vous</button>
+            <button class="tko-tab">Nearby</button>
+            <button class="tko-tab">Professionnels</button>
+            <button class="tko-tab">Services</button>
+            <button class="tko-tab">Emplois</button>
+            <button class="tko-tab">Urgent</button>
+          </div>
+          <!-- Composer -->
+          <div class="tko-composer">
+            <div class="tko-composer-top">
+              <img src="https://i.pravatar.cc/40?img=32" alt="">
+              <textarea class="tko-composer-input" placeholder="Quoi de neuf ? Partagez une mise à jour, un service, une opportunité..."></textarea>
+            </div>
+            <div class="tko-composer-actions">
+              <button class="tko-composer-action"><i class="bi bi-image"></i> Photo</button>
+              <button class="tko-composer-action"><i class="bi bi-geo-alt"></i> Lieu</button>
+              <button class="tko-composer-action"><i class="bi bi-tag"></i> Catégorie</button>
+              <button class="tko-composer-action"><i class="bi bi-exclamation-circle"></i> Urgent</button>
+              <button class="btn-tko-primary ms-auto" style="padding:.4rem 1rem;font-size:13px;">Publier</button>
+            </div>
+          </div>
+          <!-- Post 1 -->
+          <div class="tko-post">
+            <div class="tko-post-head">
+              <img src="https://i.pravatar.cc/42?img=12" alt="">
+              <div style="flex:1;">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="tko-post-author">Serge Ateba</span>
+                  <span class="badge-verified"><i class="bi bi-patch-check-fill" style="font-size:10px;"></i> Vérifié</span>
+                </div>
+                <div class="tko-post-meta"><span>&#128247; Photographe Pro &middot; Bonapriso, Douala</span><span>&bull;</span><span>Il y a 2h</span></div>
+              </div>
+              <button class="btn-tko-ghost"><i class="bi bi-three-dots"></i></button>
+            </div>
+            <div class="tko-post-body">Nouveau shooting corporate réalisé pour une grande entreprise de Douala ! Si vous recherchez un photographe professionnel pour vos événements d'entreprise, portraits ou produits, je suis disponible cette semaine. Devis gratuit. &#128247;&#10024;</div>
+            <img src="https://picsum.photos/600/300?random=10" class="tko-post-img" alt="">
+            <div class="tko-post-tag"><i class="bi bi-camera-fill"></i> Photographie</div>
+            <div class="tko-post-footer">
+              <button class="tko-post-action" data-action="like"><i class="bi bi-heart"></i><span class="ac">47</span></button>
+              <button class="tko-post-action" data-action="comment"><i class="bi bi-chat"></i><span class="ac">12</span></button>
+              <button class="tko-post-action" data-action="repost"><i class="bi bi-repeat"></i><span class="ac">8</span></button>
+              <button class="tko-post-action" data-action="save"><i class="bi bi-bookmark"></i></button>
+              <button class="tko-post-action ms-auto"><i class="bi bi-share"></i></button>
+            </div>
+          </div>
+          <!-- Post 2 -->
+          <div class="tko-post">
+            <div class="tko-post-head">
+              <img src="https://i.pravatar.cc/42?img=52" alt="">
+              <div style="flex:1;">
+                <div class="d-flex align-items-center gap-2"><span class="tko-post-author">Alain Mbarga</span><span class="badge-tko badge-tko-success" style="font-size:10px;">Disponible maintenant</span></div>
+                <div class="tko-post-meta"><span>&#9889; Electricien certifié &middot; Akwa Nord, Douala</span><span>&bull;</span><span>Il y a 3h</span></div>
+              </div>
+              <button class="btn-tko-ghost"><i class="bi bi-three-dots"></i></button>
+            </div>
+            <div class="tko-post-body"><strong>&#128276; Service disponible maintenant</strong><br>Electricien certifié avec 8 ans d'expérience. Installation, dépannage, mise aux normes. Intervention rapide dans tout Douala. Tarifs compétitifs dès <strong>15 000 FCFA</strong>.</div>
+            <div class="tko-post-tag"><i class="bi bi-lightning-charge-fill"></i> Electricité</div>
+            <div class="tko-post-footer">
+              <button class="tko-post-action" data-action="like"><i class="bi bi-heart"></i><span class="ac">23</span></button>
+              <button class="tko-post-action" data-action="comment"><i class="bi bi-chat"></i><span class="ac">5</span></button>
+              <button class="tko-post-action btn-tko-primary ms-auto" style="padding:.4rem 1rem;font-size:12px;border-radius:20px;"><i class="bi bi-telephone-fill"></i> Contacter</button>
+            </div>
+          </div>
+          <!-- Post 3 (Job) -->
+          <div class="tko-post">
+            <div class="tko-post-head">
+              <img src="https://i.pravatar.cc/42?img=58" alt="" style="border-radius:10px!important;">
+              <div style="flex:1;">
+                <div class="d-flex align-items-center gap-2"><span class="tko-post-author">Tech Solutions Cameroun</span><span class="badge-tko badge-tko-info" style="font-size:10px;">Recrutement</span></div>
+                <div class="tko-post-meta"><span>&#128188; Entreprise IT &middot; Bonamoussadi, Douala</span><span>&bull;</span><span>Il y a 5h</span></div>
+              </div>
+              <button class="btn-tko-ghost"><i class="bi bi-three-dots"></i></button>
+            </div>
+            <div class="tko-post-body"><strong>&#128293; Nous recrutons un Développeur Full-Stack !</strong><br>Stack : React + Node.js + PostgreSQL. CDI. Salaire : <strong>300 000 – 450 000 FCFA/mois</strong>. Télétravail possible 3j/sem. Expérience : 2 ans minimum.</div>
+            <div class="tko-post-tag"><i class="bi bi-code-slash"></i> Développement Web</div>
+            <div class="tko-post-footer">
+              <button class="tko-post-action" data-action="like"><i class="bi bi-heart"></i><span class="ac">89</span></button>
+              <button class="tko-post-action" data-action="save"><i class="bi bi-bookmark"></i></button>
+              <button class="tko-post-action btn-tko-primary ms-auto" style="padding:.4rem 1rem;font-size:12px;border-radius:20px;">Postuler</button>
+            </div>
+          </div>
+          <!-- Post 4 (Help) -->
+          <div class="tko-post">
+            <div class="tko-post-head">
+              <img src="https://i.pravatar.cc/42?img=32" alt="">
+              <div style="flex:1;">
+                <div class="d-flex align-items-center gap-2"><span class="tko-post-author">Jean-Baptiste K.</span><span class="badge-tko badge-tko-danger" style="font-size:10px;">Urgent</span></div>
+                <div class="tko-post-meta"><span>&#128187; Dév. Web &middot; Akwa, Douala</span><span>&bull;</span><span>Il y a 8h</span></div>
+              </div>
+              <button class="btn-tko-ghost"><i class="bi bi-three-dots"></i></button>
+            </div>
+            <div class="tko-post-body">&#128276; <strong>Besoin urgent d'un traducteur anglais/français</strong> pour un document technique (10 pages). Livraison souhaitée demain matin. Bonne rémunération. Zone Akwa ou télétravail. Contactez-moi en MP svp !</div>
+            <div class="tko-post-tag"><i class="bi bi-translate"></i> Traduction</div>
+            <div class="tko-post-footer">
+              <button class="tko-post-action" data-action="like"><i class="bi bi-heart"></i><span class="ac">14</span></button>
+              <button class="tko-post-action" data-action="comment"><i class="bi bi-chat"></i><span class="ac">7</span></button>
+              <button class="tko-post-action btn-tko-outline ms-auto" style="padding:.4rem 1rem;font-size:12px;border-radius:20px;"><i class="bi bi-chat-dots"></i> Répondre</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="col-xl-3 d-none d-xl-block right-panel">
+          <!-- Trending -->
+          <div class="tko-card">
+            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">Tendances locales</span><button class="btn-tko-ghost" style="padding:.25rem;"><i class="bi bi-arrow-right"></i></button></div>
+            <div class="tko-card-body" style="padding:.75rem;">
+              <div class="d-flex flex-column gap-2">
+                <div style="padding:.5rem .75rem;border-radius:var(--tko-radius-sm);cursor:pointer;" onmouseenter="this.style.background='var(--tko-bg)'" onmouseleave="this.style.background=''"><div style="font-size:11px;color:var(--tko-text-muted);">Tendance &middot; Douala</div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">#TalentDouala2026</div><div style="font-size:11px;color:var(--tko-text-muted);">2 847 publications</div></div>
+                <div style="padding:.5rem .75rem;border-radius:var(--tko-radius-sm);cursor:pointer;" onmouseenter="this.style.background='var(--tko-bg)'" onmouseleave="this.style.background=''"><div style="font-size:11px;color:var(--tko-text-muted);">Tendance &middot; Cameroun</div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">#Freelance237</div><div style="font-size:11px;color:var(--tko-text-muted);">1 234 publications</div></div>
+                <div style="padding:.5rem .75rem;border-radius:var(--tko-radius-sm);cursor:pointer;" onmouseenter="this.style.background='var(--tko-bg)'" onmouseleave="this.style.background=''"><div style="font-size:11px;color:var(--tko-text-muted);">Tendance &middot; Yaoundé</div><div style="font-weight:600;font-size:13px;color:var(--tko-text);">#RecrutementYDE</div><div style="font-size:11px;color:var(--tko-text-muted);">876 publications</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Suggested -->
+          <div class="tko-card">
+            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">Suggestions pour vous</span></div>
+            <div class="tko-card-body" style="padding:.75rem;">
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://i.pravatar.cc/40?img=25" style="width:40px;height:40px;border-radius:50%;flex-shrink:0;" alt="">
+                  <div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Marie Bella</div><div style="font-size:11px;color:var(--tko-text-muted);">Comptable OHADA &middot; 1.2km</div></div>
+                  <button class="btn-tko-outline" style="padding:.3rem .75rem;font-size:12px;">Suivre</button>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://i.pravatar.cc/40?img=45" style="width:40px;height:40px;border-radius:50%;flex-shrink:0;" alt="">
+                  <div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Patrick Nkomo</div><div style="font-size:11px;color:var(--tko-text-muted);">Dev Full-Stack &middot; Yaoundé</div></div>
+                  <button class="btn-tko-outline" style="padding:.3rem .75rem;font-size:12px;">Suivre</button>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://i.pravatar.cc/40?img=33" style="width:40px;height:40px;border-radius:50%;flex-shrink:0;" alt="">
+                  <div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:13px;color:var(--tko-text);">Sylvie Essama</div><div style="font-size:11px;color:var(--tko-text-muted);">Marketing Manager</div></div>
+                  <button class="btn-tko-outline" style="padding:.3rem .75rem;font-size:12px;">Suivre</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Nearby -->
+          <div class="tko-card">
+            <div class="tko-card-header"><span style="font-weight:700;font-size:14px;">Services proches</span><a href="map.html" class="btn-tko-ghost" style="padding:.25rem;font-size:12px;">Voir carte</a></div>
+            <div class="tko-card-body" style="padding:.75rem;">
+              <div class="d-flex flex-column gap-2">
+                <div style="display:flex;align-items:center;gap:.75rem;padding:.5rem;border-radius:var(--tko-radius-sm);border:1px solid var(--tko-border);">
+                  <div style="width:36px;height:36px;background:var(--tko-primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">&#128247;</div>
+                  <div><div style="font-size:13px;font-weight:600;color:var(--tko-text);">Studio Photo Elite</div><div style="font-size:11px;color:var(--tko-text-muted);">&#9733; 4.9 &middot; 0.8 km &middot; Ouvert</div></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:.75rem;padding:.5rem;border-radius:var(--tko-radius-sm);border:1px solid var(--tko-border);">
+                  <div style="width:36px;height:36px;background:var(--tko-primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">&#128295;</div>
+                  <div><div style="font-size:13px;font-weight:600;color:var(--tko-text);">Garage Auto Plus</div><div style="font-size:11px;color:var(--tko-text-muted);">&#9733; 4.7 &middot; 1.2 km &middot; Ouvert</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="tko-bottom-nav d-flex justify-content-around">
+  <a href="feed.html" class="tko-bottom-nav-item active"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
+  <a href="search.html" class="tko-bottom-nav-item"><i class="bi bi-search"></i><span>Recherche</span></a>
+  <div class="tko-bnav-fab"><div class="fab"><i class="bi bi-plus-lg"></i></div></div>
+  <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
+  <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/tikoo.js"></script>
+</body></html>
