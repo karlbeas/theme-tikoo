@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notifications — Tikoo</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Notifications – Tikoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
 </head>
 <body>
@@ -13,114 +13,95 @@
 <div class="tko-app-wrapper">
   <aside class="tko-sidebar" id="tko-sidebar">
     <div class="tko-sidebar-logo"><div class="tko-logo-icon">T</div><span class="tko-logo-text">Tikoo</span></div>
-    <nav class="tko-nav-wrap">
+    <div class="tko-nav-wrap">
       <a href="feed.html" class="tko-nav-item"><i class="bi bi-house-door-fill"></i> Accueil</a>
       <a href="search.html" class="tko-nav-item"><i class="bi bi-search"></i> Rechercher</a>
       <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
       <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
-      <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages</a>
-      <a href="notifications.html" class="tko-nav-item active"><i class="bi bi-bell-fill"></i> Notifications <span class="tko-nav-badge">7</span></a>
-      <p class="tko-nav-section">Mon espace</p>
-      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon profil</a>
+      <a href="messages.html" class="tko-nav-item"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
+      <a href="notifications.html" class="tko-nav-item active"><i class="bi bi-bell-fill"></i> Alertes <span class="tko-nav-badge">7</span></a>
+      <p class="tko-nav-section">Mon Espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
       <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
-    </nav>
-    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt=""><div class="tko-sidebar-footer-info"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="border:none;background:transparent;width:28px;height:28px;"><i class="bi bi-moon-fill"></i></button></div>
+    </div>
+    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt="JBK"><div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;flex-shrink:0;"><i class="bi bi-moon-fill"></i></button></div>
   </aside>
   <div class="tko-main-content">
     <div class="tko-topbar">
-      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:20px;"></i></button>
-      <span style="font-weight:700;font-size:16px;">Notifications</span>
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle style="border:none;background:transparent;"><i class="bi bi-list" style="font-size:22px;"></i></button>
+      <span style="font-weight:700;font-size:16px;color:var(--tko-text);">Notifications</span>
       <div class="tko-topbar-actions">
-        <button class="btn-tko-ghost" style="font-size:12px;">Tout marquer lu</button>
+        <button class="btn-tko-ghost btn-tko-sm">Tout marquer lu</button>
         <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
-        <img src="https://i.pravatar.cc/36?img=32" class="tko-avatar" alt="">
+        <img src="https://i.pravatar.cc/36?img=32" alt="Avatar" class="tko-avatar">
       </div>
     </div>
-    <div class="tko-page-content" style="max-width:680px;">
-      <div class="tko-card">
-        <div class="tko-card-header"><span>Aujourd'hui &middot; <span style="color:var(--tko-primary);font-weight:700;">7 non lues</span></span><button class="btn-tko-ghost" style="font-size:12px;padding:.2rem .5rem;">Filtrer</button></div>
-        <!-- Notif 1 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-like"><i class="bi bi-heart-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);"><strong>Serge Ateba</strong> a aimé votre publication.</div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 5 min · <a href="feed.html" style="color:var(--tko-primary);">Voir la publication</a></div>
-          </div>
-          <img src="https://i.pravatar.cc/32?img=12" style="width:32px;height:32px;border-radius:50%;flex-shrink:0;" alt="">
+    <div class="tko-page-content" style="padding:0;">
+      <!-- TABS -->
+      <div style="padding:1rem 1.5rem 0;border-bottom:1px solid var(--tko-border);">
+        <div class="tko-tabs-wrap" style="max-width:400px;"><button class="tko-tab active">Toutes (7)</button><button class="tko-tab">J’aime</button><button class="tko-tab">Connexions</button><button class="tko-tab">Emplois</button><button class="tko-tab">Avis</button></div>
+      </div>
+
+      <!-- TODAY -->
+      <div style="padding:.75rem 1.5rem .375rem;"><div style="font-size:12px;font-weight:700;color:var(--tko-text-muted);text-transform:uppercase;letter-spacing:.06em;">Aujourd’hui</div></div>
+      <div class="tko-notif-item unread">
+        <div class="tko-notif-icon ni-connect"><i class="bi bi-person-plus-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>Serge Ateba</strong> a accepté votre demande de connexion.</div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">il y a 12 min</div>
         </div>
-        <!-- Notif 2 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-connect"><i class="bi bi-person-check-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);"><strong>Marie Bella</strong> vous a envoyé une demande de connexion.</div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 12 min</div>
-            <div class="d-flex gap-2 mt-1">
-              <button class="btn-tko-primary" style="padding:.25rem .75rem;font-size:12px;">Accepter</button>
-              <button class="btn-tko-ghost" style="font-size:12px;">Ignorer</button>
-            </div>
-          </div>
-          <img src="https://i.pravatar.cc/32?img=25" style="width:32px;height:32px;border-radius:50%;flex-shrink:0;" alt="">
+        <button class="btn-tko-outline btn-tko-sm">Voir profil</button>
+      </div>
+      <div class="tko-notif-item unread">
+        <div class="tko-notif-icon ni-like"><i class="bi bi-heart-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>Marie Bella</strong> et <strong>12 autres</strong> ont aimé votre publication sur le développement Full-Stack.</div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">il y a 34 min</div>
         </div>
-        <!-- Notif 3 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-comment"><i class="bi bi-chat-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);"><strong>Patrick Nkomo</strong> a commenté votre publication : <em>"Excellente prestation !"</em></div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 35 min</div>
-          </div>
-          <img src="https://i.pravatar.cc/32?img=45" style="width:32px;height:32px;border-radius:50%;flex-shrink:0;" alt="">
+      </div>
+      <div class="tko-notif-item unread">
+        <div class="tko-notif-icon ni-job"><i class="bi bi-briefcase-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>Fintech Cameroun</strong> a publié une nouvelle offre qui correspond à votre profil : <em>Développeur Full-Stack</em>.</div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">il y a 2h</div>
         </div>
-        <!-- Notif 4 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-job"><i class="bi bi-briefcase-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);">Nouvelle offre correspondant à votre profil : <strong>Développeur Full-Stack · TechCam Solutions</strong></div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 1h · <a href="job-detail.html" style="color:var(--tko-primary);">Voir l'offre</a></div>
-          </div>
+        <button class="btn-tko-primary btn-tko-sm" onclick="window.location='job-detail.html'">Voir</button>
+      </div>
+      <div class="tko-notif-item unread">
+        <div class="tko-notif-icon ni-view"><i class="bi bi-eye-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>8 personnes</strong> ont consulté votre profil cette semaine.</div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">il y a 3h</div>
         </div>
-        <!-- Notif 5 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-review"><i class="bi bi-star-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);"><strong>Isabelle Mfou</strong> vous a laissé un avis 5★ : <em>"Très professionnel et rapide !"</em></div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 2h</div>
-          </div>
-          <img src="https://i.pravatar.cc/32?img=35" style="width:32px;height:32px;border-radius:50%;flex-shrink:0;" alt="">
+        <a href="professional-profile.html" style="font-size:13px;color:var(--tko-primary);white-space:nowrap;">Voir profil</a>
+      </div>
+
+      <!-- YESTERDAY -->
+      <div style="padding:.75rem 1.5rem .375rem;"><div style="font-size:12px;font-weight:700;color:var(--tko-text-muted);text-transform:uppercase;letter-spacing:.06em;">Hier</div></div>
+      <div class="tko-notif-item">
+        <div class="tko-notif-icon ni-comment"><i class="bi bi-chat-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>Patrick Nkomo</strong> a commenté votre post : <em>«Très utile cette info, merci !»</em></div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">Hier à 17h45</div>
         </div>
-        <!-- Notif 6 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-view"><i class="bi bi-eye-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);">Votre profil a été consulté <strong>24 fois</strong> aujourd'hui.</div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 3h</div>
-          </div>
+      </div>
+      <div class="tko-notif-item">
+        <div class="tko-notif-icon ni-review"><i class="bi bi-star-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>Aminatou Bello</strong> vous a laissé un avis 5 étoiles.</div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">Hier à 14h22</div>
         </div>
-        <!-- Notif 7 -->
-        <div class="tko-notif-item unread">
-          <div class="tko-notif-icon ni-connect"><i class="bi bi-geo-alt-fill"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);">Un client près de <strong>Bonapriso</strong> recherche un profil comme le vôtre.</div>
-            <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.2rem;">il y a 4h · <a href="search-results.html" style="color:var(--tko-primary);">Voir la demande</a></div>
-          </div>
+        <span class="tko-stars" style="font-size:14px;flex-shrink:0;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <div class="tko-notif-item">
+        <div class="tko-notif-icon ni-connect"><i class="bi bi-person-plus-fill"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;color:var(--tko-text);"><strong>Robert Essomba</strong> souhaite se connecter avec vous.</div>
+          <div style="font-size:12px;color:var(--tko-text-muted);margin-top:.25rem;">Hier à 10h05</div>
         </div>
-        <div style="border-top:1px solid var(--tko-border-light);"></div>
-        <!-- Older -->
-        <div style="padding:.75rem 1.25rem;font-size:12px;font-weight:700;color:var(--tko-text-muted);text-transform:uppercase;letter-spacing:.08em;">Hier</div>
-        <div class="tko-notif-item">
-          <div class="tko-notif-icon ni-like"><i class="bi bi-heart"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);"><strong>Alain Mbarga</strong> a aimé votre publication.</div>
-            <div style="font-size:12px;color:var(--tko-text-muted);">hier à 18:45</div>
-          </div>
-          <img src="https://i.pravatar.cc/32?img=22" style="width:32px;height:32px;border-radius:50%;flex-shrink:0;" alt="">
-        </div>
-        <div class="tko-notif-item">
-          <div class="tko-notif-icon ni-comment"><i class="bi bi-arrow-repeat"></i></div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:13px;color:var(--tko-text);"><strong>Sylvie Essama</strong> a repartagé votre publication.</div>
-            <div style="font-size:12px;color:var(--tko-text-muted);">hier à 16:12</div>
-          </div>
-          <img src="https://i.pravatar.cc/32?img=33" style="width:32px;height:32px;border-radius:50%;flex-shrink:0;" alt="">
+        <div class="d-flex gap-1 flex-shrink-0">
+          <button class="btn-tko-primary btn-tko-sm">Accepter</button>
+          <button class="btn-tko-ghost btn-tko-sm">Refuser</button>
         </div>
       </div>
     </div>
@@ -129,11 +110,10 @@
 <nav class="tko-bottom-nav">
   <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
   <a href="search.html" class="tko-bottom-nav-item"><i class="bi bi-search"></i><span>Recherche</span></a>
-  <div class="tko-bottom-nav-fab"><a href="#" class="fab"><i class="bi bi-plus-lg"></i></a></div>
-  <a href="messages.html" class="tko-bottom-nav-item"><i class="bi bi-chat-dots-fill"></i><span>Messages</span></a>
+  <div class="tko-bottom-fab-wrap"><a href="feed.html" class="tko-bottom-fab"><i class="bi bi-plus-lg"></i></a></div>
+  <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
   <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body>
-</html>
+</body></html>

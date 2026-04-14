@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messages — Tikoo</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Messages – Tikoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="../assets/css/tikoo.css" rel="stylesheet">
 </head>
 <body>
@@ -13,130 +13,112 @@
 <div class="tko-app-wrapper">
   <aside class="tko-sidebar" id="tko-sidebar">
     <div class="tko-sidebar-logo"><div class="tko-logo-icon">T</div><span class="tko-logo-text">Tikoo</span></div>
-    <nav class="tko-nav-wrap">
+    <div class="tko-nav-wrap">
       <a href="feed.html" class="tko-nav-item"><i class="bi bi-house-door-fill"></i> Accueil</a>
       <a href="search.html" class="tko-nav-item"><i class="bi bi-search"></i> Rechercher</a>
       <a href="map.html" class="tko-nav-item"><i class="bi bi-geo-alt-fill"></i> Carte</a>
       <a href="jobs.html" class="tko-nav-item"><i class="bi bi-briefcase-fill"></i> Emplois</a>
       <a href="messages.html" class="tko-nav-item active"><i class="bi bi-chat-dots-fill"></i> Messages <span class="tko-nav-badge">3</span></a>
-      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Notifications</a>
-      <p class="tko-nav-section">Mon espace</p>
-      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon profil</a>
+      <a href="notifications.html" class="tko-nav-item"><i class="bi bi-bell-fill"></i> Alertes <span class="tko-nav-badge">7</span></a>
+      <p class="tko-nav-section">Mon Espace</p>
+      <a href="professional-profile.html" class="tko-nav-item"><i class="bi bi-person-fill"></i> Mon Profil</a>
       <a href="settings.html" class="tko-nav-item"><i class="bi bi-gear-fill"></i> Paramètres</a>
-    </nav>
-    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt=""><div class="tko-sidebar-footer-info"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="border:none;background:transparent;width:28px;height:28px;"><i class="bi bi-moon-fill"></i></button></div>
+    </div>
+    <div class="tko-sidebar-footer"><img src="https://i.pravatar.cc/36?img=32" alt="JBK"><div style="flex:1;min-width:0;"><div class="name">Jean-Baptiste K.</div><div class="meta">Dév. Web · Douala</div></div><button class="tko-icon-btn" data-toggle-theme data-theme-icon style="width:30px;height:30px;border:none;background:transparent;flex-shrink:0;"><i class="bi bi-moon-fill"></i></button></div>
   </aside>
   <div class="tko-main-content">
     <div class="tko-topbar">
-      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle><i class="bi bi-list" style="font-size:20px;"></i></button>
-      <span style="font-weight:700;font-size:16px;">Messages</span>
+      <button class="tko-icon-btn d-lg-none" data-sidebar-toggle style="border:none;background:transparent;"><i class="bi bi-list" style="font-size:22px;"></i></button>
+      <span style="font-weight:700;font-size:16px;color:var(--tko-text);">Messages</span>
       <div class="tko-topbar-actions">
         <button class="tko-icon-btn"><i class="bi bi-pencil-square"></i></button>
         <button class="tko-icon-btn" data-toggle-theme data-theme-icon><i class="bi bi-moon-fill"></i></button>
-        <img src="https://i.pravatar.cc/36?img=32" class="tko-avatar" alt="">
+        <img src="https://i.pravatar.cc/36?img=32" alt="Avatar" class="tko-avatar">
       </div>
     </div>
-    <div class="tko-page-content no-pad">
-      <div class="tko-messages-layout">
-        <!-- Conversation List -->
-        <div class="tko-conv-list">
-          <div style="padding:.75rem 1rem;border-bottom:1px solid var(--tko-border);">
-            <div style="background:var(--tko-bg);border:1px solid var(--tko-border);border-radius:24px;padding:.4rem .875rem;display:flex;align-items:center;gap:.5rem;">
-              <i class="bi bi-search" style="color:var(--tko-text-muted);font-size:13px;"></i>
-              <input type="text" placeholder="Rechercher..." style="background:none;border:none;font-size:13px;color:var(--tko-text);flex:1;" class="tko-search-smart">
+
+    <div class="tko-messages-layout">
+      <!-- CONV LIST -->
+      <div class="tko-conv-list">
+        <div style="padding:.75rem 1rem;border-bottom:1px solid var(--tko-border);">
+          <div style="background:var(--tko-bg);border:1px solid var(--tko-border);border-radius:24px;padding:.5rem 1rem;display:flex;align-items:center;gap:.5rem;"><i class="bi bi-search" style="color:var(--tko-text-muted);font-size:14px;"></i><input placeholder="Rechercher une conversation..." style="border:none;background:transparent;font-family:inherit;font-size:13px;color:var(--tko-text);outline:none;flex:1;"></div>
+        </div>
+        <!-- Conversations -->
+        <div class="tko-conv-item active">
+          <div style="position:relative;"><img src="https://i.pravatar.cc/44?img=12" style="width:44px;height:44px;border-radius:50%;object-fit:cover;"><span class="online-dot" style="position:absolute;bottom:1px;right:1px;"></span></div>
+          <div style="flex:1;min-width:0;"><div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:14px;color:var(--tko-text);">Serge Ateba</span><span style="font-size:11px;color:var(--tko-text-muted);">09:34</span></div><div class="tko-conv-preview">Oui c’est parfait pour la session de vendredi !</div><div class="d-flex align-items-center justify-content-between mt-1"><span style="font-size:11px;color:var(--tko-text-muted);">Photographe</span><div style="width:18px;height:18px;background:var(--tko-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;">2</div></div></div>
+        </div>
+        <div class="tko-conv-item">
+          <img src="https://i.pravatar.cc/44?img=25" style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+          <div style="flex:1;min-width:0;"><div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:14px;color:var(--tko-text);">Marie Bella</span><span style="font-size:11px;color:var(--tko-text-muted);">Hier</span></div><div class="tko-conv-preview">Voici le rapport financier que vous avez demandé...</div><div style="font-size:11px;color:var(--tko-text-muted);margin-top:.2rem;">Comptable</div></div>
+          <div class="tko-unread-dot"></div>
+        </div>
+        <div class="tko-conv-item">
+          <img src="https://i.pravatar.cc/44?img=52" style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+          <div style="flex:1;min-width:0;"><div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:14px;color:var(--tko-text);">Fintech Cameroun</span><span style="font-size:11px;color:var(--tko-text-muted);">Hier</span></div><div class="tko-conv-preview">Bonjour, nous avons examiné votre candidature...</div><div style="font-size:11px;color:var(--tko-text-muted);margin-top:.2rem;">Entreprise</div></div>
+          <div class="tko-unread-dot"></div>
+        </div>
+        <div class="tko-conv-item">
+          <img src="https://i.pravatar.cc/44?img=47" style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+          <div style="flex:1;min-width:0;"><div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:14px;color:var(--tko-text);">Aminatou Bello</span><span style="font-size:11px;color:var(--tko-text-muted);">Lun.</span></div><div class="tko-conv-preview">Merci pour l’info, je transmets à mon équipe</div><div style="font-size:11px;color:var(--tko-text-muted);margin-top:.2rem;">DG Agence Innov</div></div>
+        </div>
+        <div class="tko-conv-item">
+          <img src="https://i.pravatar.cc/44?img=65" style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+          <div style="flex:1;min-width:0;"><div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:14px;color:var(--tko-text);">Robert Essomba</span><span style="font-size:11px;color:var(--tko-text-muted);">Sam.</span></div><div class="tko-conv-preview">L’intervention a été faite, tout est réglé &#128077;</div><div style="font-size:11px;color:var(--tko-text-muted);margin-top:.2rem;">Plombier</div></div>
+        </div>
+      </div>
+
+      <!-- CHAT WINDOW -->
+      <div class="tko-chat-window d-none d-md-flex">
+        <div class="tko-chat-header">
+          <div style="position:relative;"><img src="https://i.pravatar.cc/40?img=12" style="width:40px;height:40px;border-radius:50%;object-fit:cover;"><span class="online-dot" style="position:absolute;bottom:1px;right:1px;"></span></div>
+          <div style="flex:1;"><div style="font-weight:700;font-size:15px;color:var(--tko-text);">Serge Ateba</div><div style="font-size:12px;color:var(--tko-success);font-weight:500;">En ligne</div></div>
+          <div class="d-flex gap-2">
+            <button class="tko-icon-btn"><i class="bi bi-telephone-fill"></i></button>
+            <button class="tko-icon-btn"><i class="bi bi-camera-video-fill"></i></button>
+            <button class="tko-icon-btn"><i class="bi bi-three-dots"></i></button>
+          </div>
+        </div>
+        <div class="tko-chat-body">
+          <!-- Date separator -->
+          <div style="text-align:center;font-size:11px;color:var(--tko-text-muted);">Aujourd’hui</div>
+          <div class="d-flex flex-column">
+            <div class="tko-bubble tko-bubble-in">
+              <div>Bonjour Jean-Baptiste ! J’ai reçu votre demande pour la session corporate vendredi. Je suis disponible de 9h à 17h.</div>
+              <div class="tko-bubble-time">09:12</div>
             </div>
           </div>
-          <div class="tko-conv-item active">
-            <div style="position:relative;"><img src="https://i.pravatar.cc/44?img=12" alt=""><span class="online-dot" style="position:absolute;bottom:1px;right:1px;"></span></div>
-            <div style="flex:1;min-width:0;">
-              <div class="d-flex justify-content-between"><span style="font-weight:700;font-size:13px;">Serge Ateba</span><span style="font-size:11px;color:var(--tko-text-muted);">14:22</span></div>
-              <div class="tko-conv-preview">Super, je suis disponible samedi matin !</div>
-            </div>
-            <div class="tko-unread-dot"></div>
-          </div>
-          <div class="tko-conv-item">
-            <img src="https://i.pravatar.cc/44?img=25" alt="">
-            <div style="flex:1;min-width:0;">
-              <div class="d-flex justify-content-between"><span style="font-weight:700;font-size:13px;">Marie Bella</span><span style="font-size:11px;color:var(--tko-text-muted);">12:10</span></div>
-              <div class="tko-conv-preview">Voici le devis pour votre bilan comptable.</div>
-            </div>
-            <div class="tko-unread-dot"></div>
-          </div>
-          <div class="tko-conv-item">
-            <div style="width:44px;height:44px;border-radius:50%;background:var(--tko-primary-light);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--tko-primary);flex-shrink:0;">AL</div>
-            <div style="flex:1;min-width:0;">
-              <div class="d-flex justify-content-between"><span style="font-weight:700;font-size:13px;">Agence Lumière</span><span style="font-size:11px;color:var(--tko-text-muted);">hier</span></div>
-              <div class="tko-conv-preview">Nous avons reçu votre demande de devis.</div>
-            </div>
-            <div class="tko-unread-dot"></div>
-          </div>
-          <div class="tko-conv-item">
-            <img src="https://i.pravatar.cc/44?img=45" alt="">
-            <div style="flex:1;min-width:0;">
-              <div class="d-flex justify-content-between"><span style="font-weight:600;font-size:13px;">Patrick Nkomo</span><span style="font-size:11px;color:var(--tko-text-muted);">mer.</span></div>
-              <div class="tko-conv-preview">Merci pour votre intervention rapide !</div>
+          <div class="d-flex flex-column">
+            <div class="tko-bubble tko-bubble-out">
+              <div>Bonjour Serge ! Parfait. On prévoit 4h de shooting pour notre équipe de 12 personnes. Quel est votre tarif pour ça ?</div>
+              <div class="tko-bubble-time" style="text-align:right;">09:18</div>
             </div>
           </div>
-          <div class="tko-conv-item">
-            <img src="https://i.pravatar.cc/44?img=33" alt="">
-            <div style="flex:1;min-width:0;">
-              <div class="d-flex justify-content-between"><span style="font-weight:600;font-size:13px;">Sylvie Essama</span><span style="font-size:11px;color:var(--tko-text-muted);">mar.</span></div>
-              <div class="tko-conv-preview">Bonjour, avez-vous reçu les documents ?</div>
+          <div class="d-flex flex-column">
+            <div class="tko-bubble tko-bubble-in">
+              <div>Pour une session corporate de 4h avec 12 personnes, portraits individuels + photos d’équipe, je propose <strong>85 000 FCFA</strong> tout inclus. La retouche est comprise. Je livrerai les photos en haute résolution sous 48h.</div>
+              <div class="tko-bubble-time">09:24</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="tko-bubble tko-bubble-out">
+              <div>C’est parfait ! On confirme pour vendredi à 9h à nos bureaux d’Akwa. Je vous envoie l’adresse précise.</div>
+              <div class="tko-bubble-time" style="text-align:right;">09:31</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="tko-bubble tko-bubble-in">
+              <div>Oui c’est parfait pour la session de vendredi ! À vendredi 🙏</div>
+              <div class="tko-bubble-time">09:34</div>
             </div>
           </div>
         </div>
-        <!-- Chat Window -->
-        <div class="tko-chat-window">
-          <div class="tko-chat-header">
-            <div style="position:relative;">
-              <img src="https://i.pravatar.cc/40?img=12" style="width:40px;height:40px;border-radius:50%;object-fit:cover;" alt="">
-              <span class="online-dot" style="position:absolute;bottom:1px;right:1px;"></span>
-            </div>
-            <div style="flex:1;">
-              <div style="font-weight:700;font-size:14px;">Serge Ateba</div>
-              <div style="font-size:12px;color:var(--tko-success);">En ligne</div>
-            </div>
-            <div class="d-flex gap-1">
-              <button class="tko-icon-btn" style="border:none;"><i class="bi bi-telephone"></i></button>
-              <button class="tko-icon-btn" style="border:none;"><i class="bi bi-camera-video"></i></button>
-              <button class="tko-icon-btn" style="border:none;"><i class="bi bi-three-dots"></i></button>
-            </div>
-          </div>
-          <div class="tko-chat-body">
-            <div class="tko-bubble tko-bubble-in">
-              Bonjour ! Je recherche un photographe pour un shooting corporate la semaine prochaine. Êtes-vous disponible ?
-              <span class="tko-bubble-time">14:10</span>
-            </div>
-            <div class="tko-bubble tko-bubble-out">
-              Bonjour Jean-Baptiste ! Oui, je suis disponible. Quel jour vous convient le mieux ?
-              <span class="tko-bubble-time">14:12</span>
-            </div>
-            <div class="tko-bubble tko-bubble-in">
-              Nous préférons le samedi matin. Budget autour de 80 000 FCFA pour la session.
-              <span class="tko-bubble-time">14:15</span>
-            </div>
-            <div class="tko-bubble tko-bubble-out">
-              Parfait ! Je propose samedi à 9h. Pour 80 000 FCFA vous aurez 2h de shooting + 30 photos retouched en HD. Ça vous convient ?
-              <span class="tko-bubble-time">14:18</span>
-            </div>
-            <div class="tko-bubble tko-bubble-in">
-              C'est parfait ! Pouvez-vous me confirmer l'adresse de votre studio ?
-              <span class="tko-bubble-time">14:20</span>
-            </div>
-            <div class="tko-bubble tko-bubble-out">
-              Super, je suis disponible samedi matin ! Mon studio est à Bonapriso, rue du Progrès. Je vous envoie la localisation exacte.
-              <span class="tko-bubble-time">14:22</span>
-            </div>
-            <div style="text-align:center;">
-              <div style="display:inline-block;background:var(--tko-surface);border:1px solid var(--tko-border);border-radius:var(--tko-radius);padding:.5rem 1rem;font-size:12px;color:var(--tko-text-muted);"><i class="bi bi-geo-alt-fill" style="color:var(--tko-primary);"></i> Localisation partagée · Bonapriso, Douala</div>
-            </div>
-          </div>
-          <div class="tko-chat-footer">
-            <button class="tko-icon-btn" style="border:none;"><i class="bi bi-paperclip"></i></button>
-            <button class="tko-icon-btn" style="border:none;"><i class="bi bi-image"></i></button>
-            <input type="text" class="tko-chat-input" placeholder="Écrire un message...">
-            <button class="btn-tko-primary" style="padding:.5rem .875rem;" onclick="TikooToast&&TikooToast('Message envoyé !');"><i class="bi bi-send-fill"></i></button>
-          </div>
+        <div class="tko-chat-footer">
+          <button class="tko-icon-btn" style="background:transparent;border:none;"><i class="bi bi-paperclip" style="font-size:18px;"></i></button>
+          <button class="tko-icon-btn" style="background:transparent;border:none;"><i class="bi bi-image" style="font-size:18px;"></i></button>
+          <input class="tko-chat-input" placeholder="Écrire un message...">
+          <button class="tko-icon-btn" style="background:transparent;border:none;"><i class="bi bi-geo-alt" style="font-size:18px;"></i></button>
+          <button class="btn-tko-primary" style="padding:.5rem .875rem;border-radius:var(--tko-radius-sm);"><i class="bi bi-send-fill"></i></button>
         </div>
       </div>
     </div>
@@ -145,11 +127,10 @@
 <nav class="tko-bottom-nav">
   <a href="feed.html" class="tko-bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Accueil</span></a>
   <a href="search.html" class="tko-bottom-nav-item"><i class="bi bi-search"></i><span>Recherche</span></a>
-  <div class="tko-bottom-nav-fab"><a href="#" class="fab"><i class="bi bi-plus-lg"></i></a></div>
-  <a href="messages.html" class="tko-bottom-nav-item active"><i class="bi bi-chat-dots-fill"></i><span>Messages</span></a>
+  <div class="tko-bottom-fab-wrap"><a href="feed.html" class="tko-bottom-fab"><i class="bi bi-plus-lg"></i></a></div>
+  <a href="map.html" class="tko-bottom-nav-item"><i class="bi bi-geo-alt-fill"></i><span>Carte</span></a>
   <a href="professional-profile.html" class="tko-bottom-nav-item"><i class="bi bi-person-fill"></i><span>Profil</span></a>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/tikoo.js"></script>
-</body>
-</html>
+</body></html>
